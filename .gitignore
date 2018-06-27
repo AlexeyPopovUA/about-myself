@@ -26,3 +26,5 @@ fabric.properties
 .idea/httpRequests
 /node_modules/
 /dist/
+/bower_components/
+/.idea/sonarlint/issuestore/

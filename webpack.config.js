@@ -9,12 +9,12 @@ module.exports = env => {
 
     return {
         entry: {
-            index: './src/index.js'
+            index: './src/index.jsx'
         },
         target: "web",
         mode: env.prod ? 'production' : 'development',
         devtool: "sourcemaps",
-        watch: false,
+        watch: true,
         watchOptions: {
             aggregateTimeout: 300,
             poll: 1000,
@@ -40,10 +40,13 @@ module.exports = env => {
         module: {
             rules: [
                 {
-                    test: /\.js$/,
+                    test: /\.jsx$/,
                     exclude: /node_modules/,
                     use: {
-                        loader: "babel-loader"
+                        loader: "babel-loader"/*,
+                        options: {
+                            presets: ['react']
+                        }*/
                     }
                 },
                 {
