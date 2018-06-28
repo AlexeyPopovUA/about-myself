@@ -1,20 +1,27 @@
-import CVSection from "./components/CVSection.jsx";
 window.JSX = require('hyperscript');
+import CVSection from "./components/CVSection.jsx";
+import Contacts from "./components/Contacts.jsx";
 
-const fetchUrl = "https://gist.githubusercontent.com/AlexeyPopovUA/cc3095560d8b1335675c8f38b17ec06b/raw/56cc2a2310d56166949539545183ffbaee6631fa/my-profile.json";
+const fetchUrl = "https://api.github.com/gists/cc3095560d8b1335675c8f38b17ec06b";
 
 window.addEventListener("load", () => {
     fetch(fetchUrl)
         .then(result => result.json())
         .then(json => {
-            console.warn("fetch", json);
+            const content = JSON.parse(json.files["my-profile.json"].content);
+            console.warn("fetch", content);
 
-            document.querySelector(".sections").appendChild(CVSection.render({title: "Contact information"}));
-            document.querySelector(".sections").appendChild(CVSection.render({title: "Skills"}));
-            document.querySelector(".sections").appendChild(CVSection.render({title: "Work history"}));
-            document.querySelector(".sections").appendChild(CVSection.render({title: "Education"}));
-            document.querySelector(".sections").appendChild(CVSection.render({title: "Certifications"}));
-            document.querySelector(".sections").appendChild(CVSection.render({title: "Additional information"}));
+            document.body.appendChild(Contacts.render(content));
+            document.body.appendChild(
+                <div className="sections">
+                    {CVSection.render({title: "Contact information"})}
+                    {CVSection.render({title: "Skills"})}
+                    {CVSection.render({title: "Work history"})}
+                    {CVSection.render({title: "Education"})}
+                    {CVSection.render({title: "Certifications"})}
+                    {CVSection.render({title: "Additional information"})}
+                </div>
+            );
         })
         .catch(error => console.error(error));
 });
