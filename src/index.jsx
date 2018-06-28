@@ -11,15 +11,23 @@ window.addEventListener("load", () => {
             const content = JSON.parse(json.files["my-profile.json"].content);
             console.warn("fetch", content);
 
-            document.body.appendChild(Contacts.render(content));
             document.body.appendChild(
-                <div className="sections">
-                    {CVSection.render({title: "Contact information"})}
-                    {CVSection.render({title: "Skills"})}
-                    {CVSection.render({title: "Work history"})}
-                    {CVSection.render({title: "Education"})}
-                    {CVSection.render({title: "Certifications"})}
-                    {CVSection.render({title: "Additional information"})}
+                <div className="main">
+                    <div className="delimeter-2"/>
+                    <div className="title">Oleksii Popov</div>
+                    <div className="delimeter-3"/>
+                    <div className="photo">
+                        <img src=""/>
+                    </div>
+                    <div className="position">Javascript developer</div>
+                    <div className="sections">
+                        {CVSection.render({title: "Contact information", content: Contacts.render(content)})}
+                        {CVSection.render({title: "Skills"})}
+                        {CVSection.render({title: "Work history"})}
+                        {CVSection.render({title: "Education"})}
+                        {CVSection.render({title: "Certifications"})}
+                        {CVSection.render({title: "Additional information"})}
+                    </div>
                 </div>
             );
         })
