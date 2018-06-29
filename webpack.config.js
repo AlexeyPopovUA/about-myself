@@ -27,7 +27,7 @@ module.exports = env => {
         plugins: [
             new CleanWebpackPlugin(['dist']),
             new MiniCssExtractPlugin({
-                filename: 'style.[name].css'
+                filename: '[name].[chunkhash].css'
             }),
             new HtmlWebpackPlugin({
                 inject: false,
@@ -50,7 +50,7 @@ module.exports = env => {
                     test: /\.scss$/,
                     use: [
                         {loader: 'style-loader'},
-                        /*{loader: MiniCssExtractPlugin.loader},*/
+                        {loader: MiniCssExtractPlugin.loader},
                         {loader: 'css-loader'},
                         {
                             loader: 'sass-loader',
