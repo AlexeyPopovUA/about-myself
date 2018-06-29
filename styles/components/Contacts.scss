@@ -1,6 +1,7 @@
 .contact-item > * {
   display: inline-block;
   &.contact-item-key {
+    font-weight: bold;
     width: 150px;
   }
 }

@@ -1,11 +1,7 @@
+@import "components/CVSection";
 @import "components/Contacts";
+@import "components/Header";
 
 .main {
-  .cv-section {
-    margin: 5px 0 5px 0;
-
-    .cv-section-content {
-      padding: 0 20px 0 20px;
-    }
-  }
+  font: 15px "Arial", sans-serif;
 }

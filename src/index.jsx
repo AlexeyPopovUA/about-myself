@@ -1,4 +1,5 @@
 window.JSX = require('hyperscript');
+import Header from "./components/Header.jsx";
 import CVSection from "./components/CVSection.jsx";
 import Contacts from "./components/Contacts.jsx";
 import "./../styles/index.scss";
@@ -14,13 +15,7 @@ window.addEventListener("load", () => {
 
             document.body.appendChild(
                 <div className="main">
-                    <div className="delimeter-2"/>
-                    <div className="title">Oleksii Popov</div>
-                    <div className="delimeter-3"/>
-                    <div className="photo">
-                        <img src=""/>
-                    </div>
-                    <div className="position">Javascript developer</div>
+                    {Header.render(content.user)}
                     <div className="sections">
                         {CVSection.render({title: "Contact information", content: Contacts.render(content)})}
                         {CVSection.render({title: "Skills"})}
