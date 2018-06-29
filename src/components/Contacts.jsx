@@ -1,23 +1,15 @@
-export default class Contacts {
-    /**
-     * @param {{contacts: {key: string, value: string}[]}} data
-     * @returns {*}
-     */
-    static render(data) {
-        return (
-            Object.keys(data.contacts).map(key => Contacts.renderContact({key, value: data.contacts[key]}))
-        );
-    }
+import BaseList from "./BaseList.jsx";
 
+export default class Contacts extends BaseList {
     /**
-     * @param {{key: string, value: string}} contactItem
+     * @param {{key: string, value: string}} item
      * @returns {*}
      */
-    static renderContact(contactItem) {
+    renderItem(item) {
         return (
-            <div className="contact-item">
-                <div className="contact-item-key">{contactItem.key} :</div>
-                <div className="contact-item-value">{ifLinkToLink(contactItem.value)}</div>
+            <div className="list-item">
+                <div className="item-key">{item.key} :</div>
+                <div className="item-value">{ifLinkToLink(item.value)}</div>
             </div>
         );
     }

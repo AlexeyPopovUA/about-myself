@@ -62,7 +62,7 @@ module.exports = env => {
                 },
                 {
                     loader: "source-map-loader",
-                    test: /\.js$/,
+                    test: /\.jsx$/,
                     enforce: "pre"
                 }
             ]
