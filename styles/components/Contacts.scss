@@ -1,0 +1,6 @@
+.contact-item > * {
+  display: inline-block;
+  &.contact-item-key {
+    width: 150px;
+  }
+}

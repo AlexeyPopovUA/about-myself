@@ -1,6 +1,7 @@
 window.JSX = require('hyperscript');
 import CVSection from "./components/CVSection.jsx";
 import Contacts from "./components/Contacts.jsx";
+import "./../styles/index.scss";
 
 const fetchUrl = "https://api.github.com/gists/cc3095560d8b1335675c8f38b17ec06b";
 
