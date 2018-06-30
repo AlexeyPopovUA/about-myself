@@ -1,5 +1,15 @@
 .list-item {
   .item-key, .item-value {
     display: inline-block;
+    vertical-align: top;
+    text-align: left;
+  }
+
+  .item-key {
+    width: 30vw;
+  }
+
+  .item-value {
+    width: 50vw;
   }
 }

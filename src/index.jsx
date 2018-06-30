@@ -28,7 +28,8 @@ window.addEventListener("load", () => {
                         {CVSection.render({
                             title: "Skills",
                             cls: "skills",
-                            content: new Skills().render([])
+                            content: new Skills()
+                                .render(data.skills.map(item => ({key: item.name, value: item.description})))
                         })}
                         {CVSection.render({title: "Work history", cls: "history"})}
                         {CVSection.render({title: "Education", cls: "education"})}

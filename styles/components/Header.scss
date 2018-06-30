@@ -1,12 +1,19 @@
+@import "./../vars";
+
 .header {
-  width: 90%;
   margin: 0 auto 20px auto;
+  text-align: center;
+  color: $header-text-color;
 
   .user-name {
-    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-top: solid $delimiter-color 1px;
+    border-bottom: solid $delimiter-color 3px;
+    font-size: 32px;
+  }
 
-    font-size: 31px;
-    color: #a0694c;
-    line-height: 35px;
+  .position {
+    font-size: 24px;
   }
 }

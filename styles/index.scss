@@ -1,10 +1,18 @@
+@import "vars";
 @import "components/CVSection";
 @import "components/BaseList";
 @import "components/Contacts";
 @import "components/Header";
+@import "components/Skills";
 
-.main {
-  font: 15px "Arial", sans-serif;
-  width: 90%;
-  margin: 0 auto 0 auto;
+body {
+  background-color: $body-background-color;
+
+  .main {
+    background-color: $main-background-color;
+    font: $default-font;
+    width: 90%;
+    margin: 0 auto 0 auto;
+    padding: 20px;
+  }
 }
