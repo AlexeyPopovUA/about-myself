@@ -4,6 +4,7 @@ import CVSection from "./components/CVSection.jsx";
 import Contacts from "./components/Contacts.jsx";
 import Skills from "./components/Skills.jsx";
 import History from "./components/History.jsx";
+import AdditionalInfo from "./components/AdditionalInfo.jsx";
 import "./../styles/index.scss";
 
 const fetchUrl = "https://api.github.com/gists/cc3095560d8b1335675c8f38b17ec06b";
@@ -37,9 +38,21 @@ window.addEventListener("load", () => {
                             cls: "history",
                             content: new History().render(data.experience)
                         })}
-                        {CVSection.render({title: "Education", cls: "education"})}
-                        {CVSection.render({title: "Certifications", cls: "certificates"})}
-                        {CVSection.render({title: "Additional information", cls: "more"})}
+                        {CVSection.render({
+                            title: "Education",
+                            cls: "history",
+                            content: new History().render(data.education)
+                        })}
+                        {CVSection.render({
+                            title: "Certifications",
+                            cls: "history",
+                            content: new History().render(data.certificates)
+                        })}
+                        {CVSection.render({
+                            title: "Additional information",
+                            cls: "more",
+                            content: new AdditionalInfo().render(data.additionalInfo.map(item => ({key: item.name, value: item.description})))
+                        })}
                     </div>
                 </div>
             );
