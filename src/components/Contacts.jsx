@@ -1,4 +1,5 @@
 import BaseList from "./BaseList.jsx";
+import "./../../styles/components/Contacts.scss";
 
 export default class Contacts extends BaseList {
     /**

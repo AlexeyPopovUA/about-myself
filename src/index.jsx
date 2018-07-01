@@ -35,8 +35,7 @@ window.addEventListener("load", () => {
                         {CVSection.render({
                             title: "Work history",
                             cls: "history",
-                            content: new History()
-                                .render(data.experience.map(item => ({key: item.dateRange, value: item.description})))
+                            content: new History().render(data.experience)
                         })}
                         {CVSection.render({title: "Education", cls: "education"})}
                         {CVSection.render({title: "Certifications", cls: "certificates"})}

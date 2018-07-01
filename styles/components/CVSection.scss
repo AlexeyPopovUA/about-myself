@@ -1,10 +1,12 @@
+@import "./../vars";
+
 .cv-section {
   margin: 5px 0 20px 0;
 
   .cv-section-title {
     margin-bottom: 15px;
     text-align: center;
-    color: #a0694c;
+    color: $header-text-color;
     font-size: 18px;
   }
 }

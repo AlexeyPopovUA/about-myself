@@ -1,4 +1,8 @@
+@import "./../vars";
+
 .list-item {
+  margin-bottom: 20px;
+
   .item-key, .item-value {
     display: inline-block;
     vertical-align: top;
@@ -6,8 +10,8 @@
   }
 
   .item-key {
-    font-weight: bold;
     width: 30vw;
+    color: $header-text-color;
   }
 
   .item-value {

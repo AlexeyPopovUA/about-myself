@@ -1,3 +1,5 @@
+import "./../../styles/components/BaseList.scss";
+
 export default class BaseList {
     /**
      * @param {{key: string, value: string}[]} itemList
@@ -8,8 +10,8 @@ export default class BaseList {
     }
 
     /**
-     * @param {{key: string, value: string}} item
-     * @returns {*}
+     * @param {{key: string=, value: string=}} item
+     * @returns {HTMLElement}
      */
     renderItem(item) {
         return (

@@ -1,3 +1,5 @@
+import "./../../styles/components/CVSection.scss";
+
 export default class CVSection {
     /**
      * @param {{title: string, cls: string, content: *}} data
