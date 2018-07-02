@@ -15,7 +15,7 @@ window.addEventListener("load", () => {
         .then(json => {
             const data = JSON.parse(json.files["my-profile.json"].content);
             const contacts = data.contacts;
-            console.warn("fetch", data);
+            //console.warn("fetch", data);
 
             document.body.appendChild(
                 <div className="main">
