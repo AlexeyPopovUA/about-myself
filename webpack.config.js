@@ -7,14 +7,18 @@ const WebpackMd5Hash = require('webpack-md5-hash');
 module.exports = env => {
     console.log(env);
 
+    const mode = env.prod ? 'production' : 'development';
+    const destinationPath = env.release ? 'docs' : 'dist';
+    const watch = !env.release;
+
     return {
         entry: {
             index: './src/index.jsx'
         },
         target: "web",
-        mode: env.prod ? 'production' : 'development',
+        mode,
         devtool: "sourcemaps",
-        watch: true,
+        watch,
         watchOptions: {
             aggregateTimeout: 300,
             poll: 1000,
@@ -22,10 +26,10 @@ module.exports = env => {
         },
         output: {
             filename: '[name].[chunkhash].js',
-            path: path.resolve(__dirname, 'dist')
+            path: path.resolve(__dirname, destinationPath)
         },
         plugins: [
-            new CleanWebpackPlugin(['dist']),
+            new CleanWebpackPlugin([destinationPath]),
             new MiniCssExtractPlugin({
                 filename: '[name].[chunkhash].css'
             }),
