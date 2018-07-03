@@ -41,6 +41,9 @@
   margin-bottom: 10px;
   font-style: italic; }
 
+.history .list-item .description {
+  word-break: break-word; }
+
 .more .list-item {
   margin-bottom: 5px; }
 
@@ -53,6 +56,8 @@ body {
     width: 90%;
     margin: 0 auto 0 auto;
     padding: 20px; }
+    body .main a, body .main a:visited {
+      color: inherit; }
 
 
 /*# sourceMappingURL=index.d389db33535e40b2a4e3.css.map*/
