@@ -4,6 +4,7 @@ import CVSection from "./components/CVSection.jsx";
 import Contacts from "./components/Contacts.jsx";
 import Skills from "./components/Skills.jsx";
 import History from "./components/History.jsx";
+import Certificates from "./components/Certificates.jsx";
 import AdditionalInfo from "./components/AdditionalInfo.jsx";
 import "./../styles/index.scss";
 
@@ -45,8 +46,8 @@ window.addEventListener("load", () => {
                         })}
                         {CVSection.render({
                             title: "Certifications",
-                            cls: "history",
-                            content: new History(data.certificates).render()
+                            cls: "history certifications",
+                            content: new Certificates(data.certificates).render()
                         })}
                         {CVSection.render({
                             title: "Additional information",
