@@ -44,6 +44,14 @@
 .history .list-item .description {
   word-break: break-word; }
 
+.certificates .list-item {
+  margin-bottom: 10px; }
+  .certificates .list-item .title {
+    margin-bottom: 10px; }
+  .certificates .list-item .company-name {
+    margin-bottom: 10px;
+    font-style: italic; }
+
 .more .list-item {
   margin-bottom: 5px; }
 
@@ -60,4 +68,4 @@ body {
       color: inherit; }
 
 
-/*# sourceMappingURL=index.ff0519166a15a94954b5.css.map*/
+/*# sourceMappingURL=index.81c0a2d40745b02c4bd3.css.map*/
