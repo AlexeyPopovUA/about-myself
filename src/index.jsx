@@ -46,7 +46,7 @@ window.addEventListener("load", () => {
                         })}
                         {CVSection.render({
                             title: "Certifications",
-                            cls: "history certifications",
+                            cls: "certificates",
                             content: new Certificates(data.certificates).render()
                         })}
                         {CVSection.render({

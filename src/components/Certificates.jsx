@@ -1,5 +1,5 @@
 import BaseList from "./BaseList.jsx";
-import "./../../styles/components/History.scss";
+import "./../../styles/components/Certificates.scss";
 
 export default class Certificates extends BaseList {
     /**
