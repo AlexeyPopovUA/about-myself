@@ -1,12 +1,15 @@
 import "./../../styles/components/BaseList.scss";
 
 export default class BaseList {
+    constructor(config) {
+        this.config = config;
+    }
+
     /**
-     * @param {{key: string, value: string}[]} itemList
-     * @returns {*}
+     * @returns {HTMLElement[]}
      */
-    render(itemList) {
-        return itemList.map(item => this.renderItem(item));
+    render() {
+        return this.config.map(item => this.renderItem(item));
     }
 
     /**

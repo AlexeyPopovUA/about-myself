@@ -4,6 +4,7 @@ import "./../../styles/components/Contacts.scss";
 export default class Contacts extends BaseList {
     /**
      * @param {{key: string, value: string}} item
+     * @override
      * @returns {*}
      */
     renderItem(item) {

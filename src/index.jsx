@@ -24,34 +24,36 @@ window.addEventListener("load", () => {
                         {CVSection.render({
                             title: "Contact information",
                             cls: "contacts",
-                            content: new Contacts()
-                                .render(Object.keys(contacts).map(key => ({key, value: contacts[key]})))
+                            content: new Contacts(Object.keys(contacts).map(key => ({key, value: contacts[key]})))
+                                .render()
                         })}
                         {CVSection.render({
                             title: "Skills",
                             cls: "skills",
-                            content: new Skills()
-                                .render(data.skills.map(item => ({key: item.name, value: item.description})))
+                            content: new Skills(data.skills.map(item => ({key: item.name, value: item.description})))
+                                .render()
                         })}
                         {CVSection.render({
                             title: "Work history",
                             cls: "history",
-                            content: new History().render(data.experience)
+                            content: new History(data.experience).render()
                         })}
                         {CVSection.render({
                             title: "Education",
                             cls: "history",
-                            content: new History().render(data.education)
+                            content: new History(data.education).render()
                         })}
                         {CVSection.render({
                             title: "Certifications",
                             cls: "history",
-                            content: new History().render(data.certificates)
+                            content: new History(data.certificates).render()
                         })}
                         {CVSection.render({
                             title: "Additional information",
                             cls: "more",
-                            content: new AdditionalInfo().render(data.additionalInfo.map(item => ({key: item.name, value: item.description})))
+                            content: new AdditionalInfo(data.additionalInfo
+                                .map(item => ({key: item.name, value: item.description})))
+                                .render()
                         })}
                     </div>
                 </div>
