@@ -66,6 +66,8 @@ body {
     padding: 20px; }
     body .main a, body .main a:visited {
       color: inherit; }
+    body .main .footer {
+      margin-top: 20px; }
 
 
 /*# sourceMappingURL=index.81c0a2d40745b02c4bd3.css.map*/
