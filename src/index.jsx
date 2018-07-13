@@ -57,8 +57,13 @@ window.addEventListener("load", () => {
                                 .render()
                         })}
                     </div>
-                </div>
-            );
+                    <div className="footer">
+                        <div className="author">Developed by O.Popov, 2018</div>
+                        <div className="sources">
+                            <a href="https://github.com/AlexeyPopovUA/about-myself">GitHub sources</a>
+                        </div>
+                    </div>
+                </div>);
         })
         .catch(error => console.error(error));
 });
