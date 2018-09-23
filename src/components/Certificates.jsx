@@ -9,9 +9,9 @@ export default class Certificates extends BaseList {
      */
     renderItem(item) {
         return (
-            <div className="list-item">
-                <div className="item-key w3-text-teal">{item.date}</div>
-                <div className="item-value">
+            <div className="list-item w3-row">
+                <div className="item-key w3-text-teal w3-third">{item.date}</div>
+                <div className="item-value w3-twothird">
                     <div className="title">
                         <a href={item.link}>{item.title}</a>
                     </div>
