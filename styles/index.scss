@@ -1,18 +1,11 @@
 @import "vars";
 
 body {
-  background-color: $body-background-color;
-
   .main {
-    background-color: $main-background-color;
     font: $default-font;
 
     a, a:visited {
       color: inherit;
-    }
-
-    .footer {
-      margin-top: 20px;
     }
   }
 }

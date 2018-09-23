@@ -6,6 +6,7 @@ import Skills from "./components/Skills.jsx";
 import History from "./components/History.jsx";
 import Certificates from "./components/Certificates.jsx";
 import AdditionalInfo from "./components/AdditionalInfo.jsx";
+import Footer from "./components/Footer.jsx";
 import "./../styles/index.scss";
 
 const fetchUrl = "https://api.github.com/gists/cc3095560d8b1335675c8f38b17ec06b";
@@ -56,12 +57,7 @@ window.addEventListener("load", () => {
                                 .render()
                         })}
                     </div>
-                    <footer className="w3-container w3-teal footer">
-                        <div className="author">Developed by O.Popov, 2018</div>
-                        <div className="sources">
-                            <a href="https://github.com/AlexeyPopovUA/about-myself">GitHub sources</a>
-                        </div>
-                    </footer>
+                    {Footer.render()}
                 </div>);
         })
         .catch(error => console.error(error));
