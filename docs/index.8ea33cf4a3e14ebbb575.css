@@ -1,0 +1,42 @@
+.header {
+  text-align: center; }
+  .header .user-name {
+    font-size: 24px; }
+  .header .position {
+    font-size: 18px; }
+
+.cv-section .cv-section-title {
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 18px; }
+
+.list-item .item-key, .list-item .item-value {
+  display: inline-block;
+  vertical-align: top;
+  text-align: left; }
+
+
+.history .list-item .title {
+  margin-bottom: 10px; }
+
+.history .list-item .company-name {
+  margin-bottom: 10px;
+  font-style: italic; }
+
+.history .list-item .description {
+  word-break: break-word; }
+
+.certificates .list-item .title {
+  margin-bottom: 10px; }
+
+.certificates .list-item .company-name {
+  margin-bottom: 10px;
+  font-style: italic; }
+
+
+
+body .main a, body .main a:visited {
+  color: inherit; }
+
+
+/*# sourceMappingURL=index.8ea33cf4a3e14ebbb575.css.map*/
