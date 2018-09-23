@@ -1,9 +1,6 @@
 .header {
   margin: 0 auto 10px auto;
   text-align: center;
-  color: #a0694c;
-  border-top: solid #a0694c 1px;
-  border-bottom: solid #a0694c 1px;
   padding-top: 10px;
   padding-bottom: 10px; }
   .header .user-name {
@@ -11,13 +8,11 @@
   .header .position {
     font-size: 18px; }
 
-.cv-section {
-  margin-bottom: 15px; }
-  .cv-section .cv-section-title {
-    margin-bottom: 10px;
-    text-align: center;
-    color: #a0694c;
-    font-size: 18px; }
+.cv-section .cv-section-title {
+  margin-bottom: 10px;
+  text-align: center;
+  color: #a0694c;
+  font-size: 18px; }
 
 .list-item {
   margin-bottom: 20px; }
@@ -56,14 +51,10 @@
   margin-bottom: 5px; }
 
 body {
-  background-color: #eee;
-  margin: 0 0 0 0; }
+  background-color: #eee; }
   body .main {
     background-color: white;
-    font: 14px "Arial", sans-serif;
-    width: 90%;
-    margin: 0 auto 0 auto;
-    padding: 20px; }
+    font: 14px "Arial", sans-serif; }
     body .main a, body .main a:visited {
       color: inherit; }
     body .main .footer {
