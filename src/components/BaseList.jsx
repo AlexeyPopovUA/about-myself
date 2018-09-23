@@ -19,7 +19,7 @@ export default class BaseList {
     renderItem(item) {
         return (
             <div className="list-item">
-                <div className="item-key">{item.key}</div>
+                <div className="item-key w3-text-teal">{item.key}</div>
                 <div className="item-value">{item.value}</div>
             </div>
         );

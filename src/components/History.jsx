@@ -10,7 +10,7 @@ export default class History extends BaseList {
     renderItem(item) {
         return (
             <div className="list-item">
-                <div className="item-key">{item.date}</div>
+                <div className="item-key w3-text-teal">{item.date}</div>
                 <div className="item-value">
                     <div className="title">{item.title}</div>
                     <div className="company-name">{item.company}</div>

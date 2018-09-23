@@ -7,9 +7,9 @@ export default class CVSection {
      */
     static render(data) {
         return (
-            <div className={`cv-section ${data.cls}`}>
-                <div className="cv-section-title">{data.title}</div>
-                <div className="cv-section-content">{data.content}</div>
+            <div className={`cv-section ${data.cls} w3-card w3-white w3-container w3-margin-bottom`}>
+                <h2 className="cv-section-title w3-text-teal">{data.title}</h2>
+                <div className="cv-section-content w3-margin-bottom">{data.content}</div>
             </div>
         );
     }

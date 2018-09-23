@@ -16,12 +16,11 @@ window.addEventListener("load", () => {
         .then(json => {
             const data = JSON.parse(json.files["my-profile.json"].content);
             const contacts = data.contacts;
-            //console.warn("fetch", data);
 
             document.body.appendChild(
-                <div className="main">
+                <div className="main w3-light-grey w3-content">
                     {Header.render(data.user)}
-                    <div className="sections">
+                    <div className="w3-container sections">
                         {CVSection.render({
                             title: "Contact information",
                             cls: "contacts",
@@ -57,12 +56,12 @@ window.addEventListener("load", () => {
                                 .render()
                         })}
                     </div>
-                    <div className="footer">
+                    <footer className="w3-container w3-teal footer">
                         <div className="author">Developed by O.Popov, 2018</div>
                         <div className="sources">
                             <a href="https://github.com/AlexeyPopovUA/about-myself">GitHub sources</a>
                         </div>
-                    </div>
+                    </footer>
                 </div>);
         })
         .catch(error => console.error(error));
