@@ -9,9 +9,9 @@ export default class Contacts extends BaseList {
      */
     renderItem(item) {
         return (
-            <div className="list-item w3-row">
-                <div className="item-key w3-text-teal w3-third">{item.key}</div>
-                <div className="item-value w3-twothird">{ifLinkToLink(item.value)}</div>
+            <div className="list-item w3-row w3-margin-bottom">
+                <div className="item-key w3-text-teal w3-quarter">{item.key}</div>
+                <div className="item-value w3-threequarter">{ifLinkToLink(item.value)}</div>
             </div>
         );
     }
