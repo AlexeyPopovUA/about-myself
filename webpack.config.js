@@ -3,7 +3,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackMd5Hash = require('webpack-md5-hash');
-const {GenerateSW, InjectManifest} = require('workbox-webpack-plugin');
+const {GenerateSW} = require('workbox-webpack-plugin');
 
 module.exports = env => {
     console.log(env);
@@ -42,17 +42,23 @@ module.exports = env => {
             }),
             new WebpackMd5Hash(),
             new GenerateSW({
+                clientsClaim: true,
+                skipWaiting: true,
                 runtimeCaching: [
                     {
-                        urlPattern: new RegExp('.*\.js*'),
+                        urlPattern: new RegExp('.*\.js'),
                         handler: 'networkFirst'
                     },
                     {
-                        urlPattern: new RegExp('.*\.css*'),
+                        urlPattern: new RegExp('.*\.css'),
                         handler: 'networkFirst'
                     },
                     {
-                        urlPattern: new RegExp('.*\.html*'),
+                        urlPattern: new RegExp('.*\.html'),
+                        handler: 'networkFirst'
+                    },
+                    {
+                        urlPattern: new RegExp('^https://api.github.com/gists/.*'),
                         handler: 'networkFirst'
                     }
                 ]
