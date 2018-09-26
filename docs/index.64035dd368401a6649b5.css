@@ -38,9 +38,12 @@
   font-style: italic; }
 
 
+.own-projects .link {
+  word-break: break-all; }
+
 
 body .main a, body .main a:visited {
   color: inherit; }
 
 
-/*# sourceMappingURL=index.8ea33cf4a3e14ebbb575.css.map*/
+/*# sourceMappingURL=index.64035dd368401a6649b5.css.map*/
