@@ -5,6 +5,7 @@ import Skills from "./components/Skills.jsx";
 import History from "./components/History.jsx";
 import Certificates from "./components/Certificates.jsx";
 import AdditionalInfo from "./components/AdditionalInfo.jsx";
+import OwnProjects from "./components/OwnProjects.jsx";
 import Footer from "./components/Footer.jsx";
 import "../styles/MainView.scss";
 
@@ -49,6 +50,11 @@ export default class MainView {
                             title: "Certifications",
                             cls: "certificates",
                             content: new Certificates(data.certificates).render()
+                        })}
+                        {CVSection.render({
+                            title: "Own projects",
+                            cls: "own-projects",
+                            content: new OwnProjects(data.ownProjects).render()
                         })}
                         {CVSection.render({
                             title: "Additional information",
