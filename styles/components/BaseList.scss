@@ -1,6 +1,13 @@
 @import "./../vars";
 
 .list-item {
+  @media print {
+    & {
+      font-size: 12px;
+      page-break-inside: avoid;
+    }
+  }
+
   .item-key, .item-value {
     display: inline-block;
     vertical-align: top;
