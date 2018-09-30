@@ -46,15 +46,7 @@ module.exports = env => {
                 skipWaiting: true,
                 runtimeCaching: [
                     {
-                        urlPattern: new RegExp('.*\.js'),
-                        handler: 'networkFirst'
-                    },
-                    {
-                        urlPattern: new RegExp('.*\.css'),
-                        handler: 'networkFirst'
-                    },
-                    {
-                        urlPattern: new RegExp('.*\.html'),
+                        urlPattern: new RegExp('.*\.(js|css|html|png)'),
                         handler: 'networkFirst'
                     },
                     {
@@ -72,6 +64,12 @@ module.exports = env => {
                     use: {
                         loader: "babel-loader"
                     }
+                },
+                {
+                    test: /\.(png|svg|jpg|gif)$/,
+                    use: [
+                        'file-loader'
+                    ]
                 },
                 {
                     test: /\.scss$/,
