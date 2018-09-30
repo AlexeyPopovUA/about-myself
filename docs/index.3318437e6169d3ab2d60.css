@@ -63,6 +63,12 @@
   .footer {
     display: none; } }
 
+.footer .github-icon {
+  height: 1em; }
+
+.footer .github-link, .footer .github-icon {
+  vertical-align: middle; }
+
 @media print {
   .w3-margin-bottom {
     margin-bottom: 8px !important; }
@@ -81,4 +87,4 @@ body .main a, body .main a:visited {
   color: inherit; }
 
 
-/*# sourceMappingURL=index.64035dd368401a6649b5.css.map*/
+/*# sourceMappingURL=index.3318437e6169d3ab2d60.css.map*/
