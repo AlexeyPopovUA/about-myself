@@ -25,6 +25,10 @@ module.exports = env => {
             poll: 1000,
             ignored: /node_modules/
         },
+        devServer: {
+            contentBase: './dist',
+            port: 9000
+        },
         output: {
             filename: '[name].[chunkhash].js',
             path: path.resolve(__dirname, destinationPath)
