@@ -2,7 +2,6 @@ const path = require('path');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const WebpackMd5Hash = require('webpack-md5-hash');
 const {GenerateSW} = require('workbox-webpack-plugin');
 
 module.exports = env => {
@@ -30,13 +29,13 @@ module.exports = env => {
             port: 9000
         },
         output: {
-            filename: '[name].[chunkhash].js',
+            filename: '[name].js',
             path: path.resolve(__dirname, destinationPath)
         },
         plugins: [
             new CleanWebpackPlugin([destinationPath]),
             new MiniCssExtractPlugin({
-                filename: '[name].[chunkhash].css'
+                filename: '[name].css'
             }),
             new HtmlWebpackPlugin({
                 inject: false,
@@ -44,7 +43,6 @@ module.exports = env => {
                 template: './index.html',
                 filename: 'index.html'
             }),
-            new WebpackMd5Hash(),
             new GenerateSW({
                 clientsClaim: true,
                 skipWaiting: true,
