@@ -3,6 +3,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const {GenerateSW} = require('workbox-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = env => {
     console.log(env);
@@ -48,7 +49,7 @@ module.exports = env => {
                 skipWaiting: true,
                 runtimeCaching: [
                     {
-                        urlPattern: new RegExp('.*\.(js|css|html|png)'),
+                        urlPattern: new RegExp('.*\.(js|css|html|png|json)'),
                         handler: 'networkFirst'
                     },
                     {
@@ -56,7 +57,10 @@ module.exports = env => {
                         handler: 'networkFirst'
                     }
                 ]
-            })
+            }),
+            new CopyWebpackPlugin([
+                {from: './manifest.json', to: `./manifest.json`, flatten: true},
+            ])
         ],
         module: {
             rules: [
