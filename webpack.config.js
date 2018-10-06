@@ -40,7 +40,6 @@ module.exports = env => {
             }),
             new HtmlWebpackPlugin({
                 inject: false,
-                hash: true,
                 template: './index.html',
                 filename: 'index.html'
             }),
@@ -59,7 +58,8 @@ module.exports = env => {
                 ]
             }),
             new CopyWebpackPlugin([
-                {from: './manifest.json', to: `./manifest.json`, flatten: true},
+                {from: './manifest.json', to: "./manifest.json", flatten: true},
+                {from: './images', to: "./"},
             ])
         ],
         module: {
