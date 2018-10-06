@@ -1,0 +1,12 @@
+{
+  "name": "About Myself",
+  "short_name": "MyCV",
+  "start_url": ".",
+  "description": "My CV",
+  "theme_color": "#009688",
+  "background_color": "#009688",
+  "crossorigin": null,
+  "inject": true,
+  "fingerprints": true,
+  "includeDirectory": true
+}

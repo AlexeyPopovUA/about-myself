@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.2/workbox-sw.js");
 
 importScripts(
-  "precache-manifest.a254a39614548a2ac4d7861092022b31.js"
+  "precache-manifest.5232e5ce6240698fb4aba8478e5fd2b9.js"
 );
 
 workbox.skipWaiting();
@@ -29,5 +29,5 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerRoute(/.*.(js|css|html|png)/, workbox.strategies.networkFirst(), 'GET');
+workbox.routing.registerRoute(/.*.(js|css|html|png|json)/, workbox.strategies.networkFirst(), 'GET');
 workbox.routing.registerRoute(/^https:\/\/api.github.com\/gists\/.*/, workbox.strategies.networkFirst(), 'GET');
