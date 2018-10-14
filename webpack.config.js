@@ -48,11 +48,19 @@ module.exports = env => {
                 skipWaiting: true,
                 runtimeCaching: [
                     {
-                        urlPattern: new RegExp('.*\.(js|css|html|png|json)'),
+                        urlPattern: new RegExp('.+w3schools.+\.css'),
+                        handler: 'cacheFirst'
+                    },
+                    {
+                        urlPattern: new RegExp('.+manifest\.json'),
+                        handler: 'cacheFirst'
+                    },
+                    {
+                        urlPattern: new RegExp('.+\.(js|css|html|png|json)'),
                         handler: 'networkFirst'
                     },
                     {
-                        urlPattern: new RegExp('^https://api.github.com/gists/.*'),
+                        urlPattern: new RegExp('.+api\.github\.com/gists/.+'),
                         handler: 'networkFirst'
                     }
                 ]
