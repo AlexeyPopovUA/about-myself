@@ -29,5 +29,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerRoute(/.*.(js|css|html|png|json)/, workbox.strategies.networkFirst(), 'GET');
-workbox.routing.registerRoute(/^https:\/\/api.github.com\/gists\/.*/, workbox.strategies.networkFirst(), 'GET');
+workbox.routing.registerRoute(/.+w3schools.+.css/, workbox.strategies.cacheFirst(), 'GET');
+workbox.routing.registerRoute(/.+manifest.json/, workbox.strategies.cacheFirst(), 'GET');
+workbox.routing.registerRoute(/.+.(js|css|html|png|json)/, workbox.strategies.networkFirst(), 'GET');
+workbox.routing.registerRoute(/.+api.github.com\/gists\/.+/, workbox.strategies.networkFirst(), 'GET');
