@@ -5,7 +5,6 @@ export default class Store {
 
     load() {
         return window.fetch(this.url)
-            .then(result => result.json())
-            .then(json => JSON.parse(json.files["my-profile.json"].content));
+            .then(result => result.json());
     }
 }

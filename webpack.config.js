@@ -67,6 +67,7 @@ module.exports = env => {
             }),
             new CopyWebpackPlugin([
                 {from: './manifest.json', to: "./manifest.json", flatten: true},
+                {from: './data/data.json', to: "./data.json", flatten: true},
                 {from: './images', to: "./"},
             ])
         ],
