@@ -2,7 +2,7 @@
   "name": "About Myself",
   "short_name": "MyCV",
   "scope": "/",
-  "start_url": "/?home",
+  "start_url": "/index.html",
   "display": "fullscreen",
   "description": "My CV",
   "theme_color": "#009688",
