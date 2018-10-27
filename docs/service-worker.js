@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.2/workbox-sw.js");
 
 importScripts(
-  "precache-manifest.3dfe505d186b1f4b0c214f85c83ef67e.js"
+  "precache-manifest.f89d35a43cff29128f649886035695e8.js"
 );
 
 workbox.skipWaiting();
@@ -32,4 +32,3 @@ workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 workbox.routing.registerRoute(/.+w3schools.+.css/, workbox.strategies.cacheFirst(), 'GET');
 workbox.routing.registerRoute(/.+manifest.json/, workbox.strategies.cacheFirst(), 'GET');
 workbox.routing.registerRoute(/.+.(js|css|html|png|json)/, workbox.strategies.networkFirst(), 'GET');
-workbox.routing.registerRoute(/.+api.github.com\/gists\/.+/, workbox.strategies.networkFirst(), 'GET');

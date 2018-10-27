@@ -9,6 +9,7 @@
     "Email": "alexejpopovua@gmail.com",
     "Skype": "brainiacalex",
     "Phone": "+31621548922",
+    "Website": "alexeypopovua.github.io/about-myself",
     "LinkedIn": "linkedin.com/in/alexey-popov-9747a255/",
     "GitHub": "github.com/AlexeyPopovUA",
     "Twitter": "twitter.com/Alexej_Popov"
@@ -75,31 +76,36 @@
     {
       "company": "Albelli (Amsterdam, Netherlands)",
       "title": "Software Developer",
-      "date": "April 2016 - Present (2 years 7 months)",
+      "dateStart": "April 2016",
+      "dateEnd": "",
       "description": "Web UI development for online html5 photo editors and mobile application. Development of different tools for debugging/logging/fixing orders etc. in javascript and typescript. Code quality monitoring, performance optimization etc."
     },
     {
       "company": "Insoft Global (Ukraine)",
       "title": "JavaScript Developer",
-      "date": "March 2013 - March 2016 (3 years)",
+      "dateStart": "March 2013",
+      "dateEnd": "March 2016",
       "description": "Web UI and server side developing in cloud management platforms, energy management and infrastructure managementplatforms. Hybrid mobile application POC. Code review, code refactoring, technical interviews, mentorship"
     },
     {
       "company": "Exadel",
       "title": "JavaScript Developer",
-      "date": "July 2012 - February 2013 (8 months)",
+      "dateStart": "July 2012",
+      "dateEnd": "February 2013",
       "description": "Web UI developing in Next Wave Logistics (e-commerce project)"
     },
     {
       "company": "Simple Solutions",
       "title": "Junior PHP Developer",
-      "date": "January 2012 - July 2012 (7 months)",
+      "dateStart": "January 2012",
+      "dateEnd": "July 2012",
       "description": "Website development using Wordpress, OpenCart. Plugins, widgets, themes development on Wordpress. Preliminary project analysis. Tasks estimation. User guides writing"
     },
     {
       "company": "Simple Solutions",
       "title": "QA Engineer",
-      "date": "August 2011 - January 2012 (6 months)",
+      "dateStart": "August 2011",
+      "dateEnd": "January 2012",
       "description": "Manual testing. Specification writing. UI prototyping"
     }
   ],
@@ -138,7 +144,7 @@
   "ownProjects": [
     {
       "name": "Advanced Logger",
-      "description": "Open-source isomorphic javascript module for sending logs to the remote logger",
+      "description": "Open-source isomorphic javascript module for reporting data (logs) to remote log storages like SumoLogic and Loggly with support of different reporting strategies",
       "links": [
         {
           "name": "npm",
