@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -65,7 +66,8 @@ module.exports = env => {
                 {from: './manifest.json', to: "./manifest.json", flatten: true},
                 {from: './data/data.json', to: "./data.json", flatten: true},
                 {from: './images', to: "./"},
-            ])
+            ]),
+            new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
         ],
         module: {
             rules: [
