@@ -9,6 +9,7 @@
     "Email": "alexejpopovua@gmail.com",
     "Skype": "brainiacalex",
     "Phone": "+31621548922",
+    "Website": "alexeypopovua.github.io/about-myself",
     "LinkedIn": "linkedin.com/in/alexey-popov-9747a255/",
     "GitHub": "github.com/AlexeyPopovUA",
     "Twitter": "twitter.com/Alexej_Popov"
@@ -138,7 +139,7 @@
   "ownProjects": [
     {
       "name": "Advanced Logger",
-      "description": "Open-source isomorphic javascript module for sending logs to the remote logger",
+      "description": "Open-source isomorphic javascript module for reporting data (logs) to remote log storages like SumoLogic and Loggly with support of different reporting strategies",
       "links": [
         {
           "name": "npm",
