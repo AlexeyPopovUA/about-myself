@@ -58,10 +58,6 @@ module.exports = env => {
                     {
                         urlPattern: new RegExp('.+\.(js|css|html|png|json)'),
                         handler: 'networkFirst'
-                    },
-                    {
-                        urlPattern: new RegExp('.+api\.github\.com/gists/.+'),
-                        handler: 'networkFirst'
                     }
                 ]
             }),
