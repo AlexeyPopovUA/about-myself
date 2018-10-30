@@ -2,7 +2,8 @@
   "user": {
     "name": "Oleksii",
     "surname": "Popov",
-    "initials": "O.Y."
+    "initials": "O.Y.",
+    "position": "JavaScript developer"
   },
   "contacts": {
     "I live in": "Amsterdam, Netherlands",

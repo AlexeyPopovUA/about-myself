@@ -19,6 +19,11 @@ export default class OwnProjects extends BaseList {
         );
     }
 
+    /**
+     * @private
+     * @param {{name: string, link: string}} linkData
+     * @returns {HTMLElement}
+     */
     renderLink(linkData) {
         return (
             <div className="link">

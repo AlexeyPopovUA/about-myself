@@ -13,6 +13,7 @@ export default class BaseList {
     }
 
     /**
+     * @protected
      * @param {{key: string=, value: string=}} item
      * @returns {HTMLElement}
      */

@@ -3,19 +3,24 @@ import History from "./History.jsx";
 import moment from "moment";
 
 export default class HistorySection extends CVSection {
-    /**
-     * @param {Array} data
-     * @returns {HTMLElement}
-     */
-    static render(data) {
-        const cls = "history";
-        const historyData = this.getHistoryData(data);
-        const content = new History(historyData.historyItems).render();
+    constructor(props) {
+        super(props);
 
+        const historyData = this.getHistoryData(this.props.data);
+        this.props = Object.assign(this.props, {
+            historyData: historyData,
+            content: new History(historyData.historyItems).render()
+        });
+    }
+
+    /**
+     * @override
+     */
+    render() {
         return (
-            <div className={`cv-section ${cls} w3-card w3-white w3-container w3-margin-bottom`}>
-                <h2 className="cv-section-title w3-text-teal">{`Work history (${historyData.total})`}</h2>
-                <div className="cv-section-content w3-margin-bottom">{content}</div>
+            <div className={`cv-section ${this.props.cls} w3-card w3-white w3-container w3-margin-bottom`}>
+                <h2 className="cv-section-title w3-text-teal">{`Work history (${this.props.historyData.total})`}</h2>
+                <div className="cv-section-content w3-margin-bottom">{this.props.content}</div>
             </div>
         );
     }
@@ -25,7 +30,7 @@ export default class HistorySection extends CVSection {
      * @param {Array} items
      * @returns {{total: string, historyItems: Array}}
      */
-    static getHistoryData(items) {
+    getHistoryData(items) {
         const historyDurations = items
             .map(item => {
                 return moment.duration(
@@ -57,7 +62,7 @@ export default class HistorySection extends CVSection {
      * @param duration
      * @returns {string}
      */
-    static getHumanizedDuration(duration) {
+    getHumanizedDuration(duration) {
         const years = duration.years();
         let months = duration.months();
         const days = duration.days();

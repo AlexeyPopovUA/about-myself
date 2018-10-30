@@ -16,53 +16,53 @@ export default class MainView {
     render(data) {
         return (
             <div className="main">
-                {Header.render(data.user)}
+                {(new Header(data.user)).render()}
                 <div className="w3-content">
                     <div className="w3-container sections">
-                        {CVSection.render({
+                        {(new CVSection({
                             title: "Contact information",
                             cls: "contacts",
                             content: new Contacts(Object.keys(data.contacts).map(key => ({
                                 key,
                                 value: data.contacts[key]
-                            })))
-                                .render()
-                        })}
-                        {CVSection.render({
+                            }))).render()
+                        })).render()}
+                        {(new CVSection({
                             title: "Skills",
                             cls: "skills",
                             content: new Skills(data.skills.map(item => ({
                                 key: item.name,
                                 value: item.description
-                            })))
-                                .render()
-                        })}
-                        {HistorySection.render(data.experience)}
-                        {CVSection.render({
+                            }))).render()
+                        })).render()}
+                        {(new HistorySection({
+                            data: data.experience,
+                            cls: "history"
+                        })).render()}
+                        {(new CVSection({
                             title: "Education",
                             cls: "history",
                             content: new History(data.education).render()
-                        })}
-                        {CVSection.render({
+                        })).render()}
+                        {(new CVSection({
                             title: "Certifications",
                             cls: "certificates",
                             content: new Certificates(data.certificates).render()
-                        })}
-                        {CVSection.render({
+                        })).render()}
+                        {(new CVSection({
                             title: "Own projects",
                             cls: "own-projects",
                             content: new OwnProjects(data.ownProjects).render()
-                        })}
-                        {CVSection.render({
+                        })).render()}
+                        {(new CVSection({
                             title: "Additional information",
                             cls: "more",
                             content: new AdditionalInfo(data.additionalInfo
-                                .map(item => ({key: item.name, value: item.description})))
-                                .render()
-                        })}
+                                .map(item => ({key: item.name, value: item.description}))).render()
+                        })).render()}
                     </div>
                 </div>
-                {Footer.render()}
+                {(new Footer()).render()}
             </div>
         );
     }
