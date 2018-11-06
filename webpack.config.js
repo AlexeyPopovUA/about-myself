@@ -42,7 +42,10 @@ module.exports = env => {
             new HtmlWebpackPlugin({
                 inject: false,
                 template: './index.html',
-                filename: 'index.html'
+                filename: 'index.html',
+                PRODUCTION: !!env.release,
+                GOOGLE_ANALYTICS_SCRIPT: !!env.release ?
+                    "<script async src=\"https://www.googletagmanager.com/gtag/js?id=UA-127711409-1\"></script>" : ""
             }),
             new GenerateSW({
                 clientsClaim: true,
@@ -67,7 +70,7 @@ module.exports = env => {
                 {from: './data/data.json', to: "./data.json", flatten: true},
                 {from: './images', to: "./"},
             ]),
-            new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
+            new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/)
         ],
         module: {
             rules: [

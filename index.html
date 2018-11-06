@@ -9,18 +9,19 @@
     <link rel="shortcut icon" type="image/png" href="icons/main-36x36.png"/>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.index.css %>">
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127711409-1"></script>
-    <script>
+    <%= htmlWebpackPlugin.options.GOOGLE_ANALYTICS_SCRIPT %>
+    <script type="application/javascript">
         // todo Put to a js file
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => navigator.serviceWorker.register('./service-worker.js'));
         }
-        //analytics thing :) just for spying, no worries
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'UA-127711409-1');
+        if (<%= htmlWebpackPlugin.options.PRODUCTION %>) {
+            //analytics thing :) just for spying, no worries
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-127711409-1');
+        }
     </script>
     <script src="<%= htmlWebpackPlugin.files.chunks.index.entry %>"></script>
     <noscript>
