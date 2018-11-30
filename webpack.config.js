@@ -66,8 +66,8 @@ module.exports = env => {
                 ]
             }),
             new CopyWebpackPlugin([
-                {from: './manifest.json', to: "./manifest.json", flatten: true},
-                {from: './data/data.json', to: "./data.json", flatten: true},
+                {from: './manifest.json', to: "./", flatten: true},
+                {from: './data/data.json', to: "./", flatten: true},
                 {from: './images', to: "./"},
             ]),
             new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/)
