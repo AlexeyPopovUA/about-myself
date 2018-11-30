@@ -10,8 +10,8 @@ module.exports = env => {
     console.log(env);
 
     const mode = env.prod ? 'production' : 'development';
-    const destinationPath = env.release ? 'docs' : 'dist';
-    const watch = !env.release;
+    const destinationPath = 'dist';
+    const watch = env.watch === true;
 
     return {
         entry: {

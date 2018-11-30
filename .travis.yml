@@ -11,13 +11,10 @@ script:
 #  - npm run test
   - npm run build-prod
 
-before_deploy:
-  - npm run build-release
-
 deploy:
   provider: pages
-  local-dir: docs
-#  skip-cleanup: true
+  local-dir: dist
+  skip-cleanup: true
   github-token: $GITHUB_TOKEN
   keep-history: true
   on:
