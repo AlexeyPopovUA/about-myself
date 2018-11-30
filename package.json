@@ -22,7 +22,7 @@
   "bugs": {
     "url": "https://github.com/AlexeyPopovUA/about-myself/issues"
   },
-  "homepage": "https://github.com/AlexeyPopovUA/about-myself#readme",
+  "homepage": "https://alexeypopovua.github.io/about-myself",
   "devDependencies": {
     "@babel/core": "^7.1.2",
     "@babel/preset-env": "^7.1.0",
