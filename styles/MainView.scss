@@ -7,4 +7,17 @@ body {
       color: inherit;
     }
   }
+
+  @media print {
+    * {
+      box-shadow: none !important;
+    }
+
+    &.w3-light-grey {
+      background-color: #FFFFFF !important;
+    }
+    .sections {
+      padding: 0;
+    }
+  }
 }

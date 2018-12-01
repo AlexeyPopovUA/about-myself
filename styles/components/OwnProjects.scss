@@ -2,4 +2,10 @@
   .link {
     word-break: break-all;
   }
+
+  @media print {
+    .description {
+      margin-top: 4px !important;
+    }
+  }
 }

@@ -1,22 +1,28 @@
-@media print {
-  .w3-margin-bottom {
-    margin-bottom: 8px !important;
-  }
-  .w3-margin-top {
-    margin-bottom: 8px !important;
+.main {
+  @media print {
+    .w3-container {
+      padding-left: 2px;
+      padding-right: 2px;
+    }
+
+    .w3-content {
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    h2 {
+      margin-top: 3px;
+      margin-bottom: 3px;
+    }
   }
 
-  .w3-container {
-    padding-left: 8px;
-    padding-right: 8px;
-  }
+  @media print and (min-width: 500px) {
+    .w3-quarter {
+      width: 25% !important;
+    }
 
-  .w3-padding {
-    padding: 4px 8px!important;
-  }
-
-  h2 {
-    margin-top: 5px;
-    margin-bottom: 5px;
+    .w3-threequarter {
+      width: 74% !important;
+    }
   }
 }
