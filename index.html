@@ -15,7 +15,7 @@
     <script type="application/javascript">
         // todo Put to a js file
         if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => navigator.serviceWorker && navigator.serviceWorker.register('./service-worker.js'));
+            window.addEventListener('load', () => navigator.serviceWorker && navigator.serviceWorker.register('service-worker.js'));
         }
         if (<%= htmlWebpackPlugin.options.PRODUCTION %>) {
             //analytics thing :) just for spying, no worries
