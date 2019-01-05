@@ -1,26 +1,18 @@
+import preact from 'preact';
 import CVSection from "./CVSection.jsx";
 import History from "./History.jsx";
 import moment from "moment";
 
 export default class HistorySection extends CVSection {
-    constructor(props) {
-        super(props);
-
-        const historyData = this.getHistoryData(this.props.data);
-        this.props = Object.assign(this.props, {
-            historyData: historyData,
-            content: new History(historyData.historyItems).render()
-        });
-    }
-
-    /**
-     * @override
-     */
-    render() {
+    render({renderData: props}) {
+        const historyData = this.getHistoryData(props.data);
+        props = Object.assign(props, {historyData});
         return (
-            <div className={`cv-section ${this.props.cls} w3-card w3-white w3-container w3-margin-bottom`}>
-                <h2 className="cv-section-title w3-text-teal">{`Work history (${this.props.historyData.total})`}</h2>
-                <div className="cv-section-content w3-margin-bottom">{this.props.content}</div>
+            <div className={`cv-section ${props.cls} w3-card w3-white w3-container w3-margin-bottom`}>
+                <h2 className="cv-section-title w3-text-teal">{`Work history (${props.historyData.total})`}</h2>
+                <div className="cv-section-content w3-margin-bottom">
+                    <History renderData={historyData.historyItems}/>
+                </div>
             </div>
         );
     }

@@ -72,6 +72,11 @@ module.exports = env => {
             ]),
             new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/)
         ],
+        resolve: {
+            extensions: ['.js', '.mjs'],
+            // todo Resolve the problem with mjs import from node_modules
+            mainFields: ["main", "module"]
+        },
         module: {
             rules: [
                 {

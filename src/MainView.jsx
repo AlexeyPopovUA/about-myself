@@ -10,59 +10,37 @@ import OwnProjects from "./components/OwnProjects.jsx";
 import Footer from "./components/Footer.jsx";
 import "../styles/MainView.scss";
 
-export default class MainView {
-    constructor() {}
+import preact from 'preact';
 
-    render(data) {
+export default class MainView extends preact.Component {
+    render({renderData: props}) {
         return (
             <div className="main">
-                {(new Header(data.user)).render()}
+                <Header renderData={props.user}/>
                 <div className="w3-content">
                     <div className="w3-container sections">
-                        {(new CVSection({
-                            title: "Contact information",
-                            cls: "contacts",
-                            content: new Contacts(Object.keys(data.contacts).map(key => ({
-                                key,
-                                value: data.contacts[key]
-                            }))).render()
-                        })).render()}
-                        {(new CVSection({
-                            title: "Skills",
-                            cls: "skills",
-                            content: new Skills(data.skills.map(item => ({
-                                key: item.name,
-                                value: item.description
-                            }))).render()
-                        })).render()}
-                        {(new HistorySection({
-                            data: data.experience,
-                            cls: "history"
-                        })).render()}
-                        {(new CVSection({
-                            title: "Education",
-                            cls: "history",
-                            content: new History(data.education).render()
-                        })).render()}
-                        {(new CVSection({
-                            title: "Certifications",
-                            cls: "certificates",
-                            content: new Certificates(data.certificates).render()
-                        })).render()}
-                        {(new CVSection({
-                            title: "Own projects",
-                            cls: "own-projects",
-                            content: new OwnProjects(data.ownProjects).render()
-                        })).render()}
-                        {(new CVSection({
-                            title: "Additional information",
-                            cls: "more",
-                            content: new AdditionalInfo(data.additionalInfo
-                                .map(item => ({key: item.name, value: item.description}))).render()
-                        })).render()}
+                        <CVSection renderData={({title: "Contact information", cls: "contacts"})}>
+                            <Contacts renderData={Object.keys(props.contacts).map(key => ({key, value: props.contacts[key]}))}/>
+                        </CVSection>
+                        <CVSection renderData={({title: "Skills", cls: "skills"})}>
+                            <Skills renderData={props.skills.map(item => ({key: item.name, value: item.description}))}/>
+                        </CVSection>
+                        <HistorySection renderData={({data: props.experience, cls: "history"})}/>
+                        <CVSection renderData={({title: "Education", cls: "history"})}>
+                            <History renderData={props.education}/>
+                        </CVSection>
+                        <CVSection renderData={({title: "Certifications", cls: "certificates"})}>
+                            <Certificates renderData={props.certificates}/>
+                        </CVSection>
+                        <CVSection renderData={({title: "Own projects", cls: "own-projects"})}>
+                            <OwnProjects renderData={props.ownProjects}/>
+                        </CVSection>
+                        <CVSection renderData={({title: "Additional information", cls: "more"})}>
+                            <AdditionalInfo renderData={props.additionalInfo.map(item => ({key: item.name, value: item.description}))}/>
+                        </CVSection>
                     </div>
                 </div>
-                {(new Footer()).render()}
+                <Footer/>
             </div>
         );
     }

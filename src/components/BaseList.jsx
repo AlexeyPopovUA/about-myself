@@ -1,15 +1,12 @@
+import preact from 'preact';
 import "./../../styles/components/BaseList.scss";
 
-export default class BaseList {
-    constructor(config) {
-        this.config = config;
-    }
-
+export default class BaseList extends preact.Component {
     /**
      * @returns {HTMLElement[]}
      */
-    render() {
-        return this.config.map(item => this.renderItem(item));
+    render({renderData: items}) {
+        return <div className="base-list">{items.map(item => this.renderItem(item))}</div>;
     }
 
     /**

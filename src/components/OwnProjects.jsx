@@ -1,3 +1,4 @@
+import preact from 'preact';
 import BaseList from "./BaseList.jsx";
 import "./../../styles/components/OwnProjects.scss";
 
