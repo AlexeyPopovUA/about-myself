@@ -75,25 +75,32 @@
   ],
   "experience": [
     {
+      "company": "TomTom (Amsterdam, Netherlands)",
+      "title": "Senior Software Developer",
+      "dateStart": "January 2019",
+      "dateEnd": "",
+      "description": "Front end development"
+    },
+    {
       "company": "Albelli (Amsterdam, Netherlands)",
       "title": "Software Developer",
       "dateStart": "April 2016",
-      "dateEnd": "",
-      "description": "Web UI development for online html5 photo editors and mobile application. Development of different tools for debugging/logging/fixing orders etc. in javascript and typescript. Code quality monitoring, performance optimization etc."
+      "dateEnd": "December 2019",
+      "description": "Front end development for online html5 photo editors and mobile application. Development of different tools for debugging/logging/fixing orders etc. in javascript and typescript. Code quality monitoring, performance optimization etc."
     },
     {
       "company": "Insoft Global (Ukraine)",
       "title": "JavaScript Developer",
       "dateStart": "March 2013",
       "dateEnd": "March 2016",
-      "description": "Web UI and server side developing in cloud management platforms, energy management and infrastructure managementplatforms. Hybrid mobile application POC. Code review, code refactoring, technical interviews, mentorship"
+      "description": "Front end and server side developing in cloud management platforms, energy management and infrastructure managementplatforms. Hybrid mobile application POC. Code review, code refactoring, technical interviews, mentorship"
     },
     {
       "company": "Exadel",
       "title": "JavaScript Developer",
       "dateStart": "July 2012",
       "dateEnd": "February 2013",
-      "description": "Web UI developing in Next Wave Logistics (e-commerce project)"
+      "description": "Front end developing in Next Wave Logistics (e-commerce project)"
     },
     {
       "company": "Simple Solutions",
