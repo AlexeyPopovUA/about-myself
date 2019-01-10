@@ -5,6 +5,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const {GenerateSW} = require('workbox-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+//const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 module.exports = env => {
     console.log(env);
@@ -70,7 +71,8 @@ module.exports = env => {
                 {from: './data/data.json', to: "./", flatten: true},
                 {from: './images', to: "./"},
             ]),
-            new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/)
+            new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/)/*,
+            new BundleAnalyzerPlugin()*/
         ],
         resolve: {
             extensions: ['.js', '.mjs'],
