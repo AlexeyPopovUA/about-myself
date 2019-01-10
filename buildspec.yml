@@ -6,7 +6,7 @@ phases:
       - npm install
   build:
     commands:
-      - npm run build-release
+      - npm run build-prod
 artifacts:
   files:
     - ./dist/**/*
