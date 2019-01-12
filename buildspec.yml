@@ -9,12 +9,7 @@ phases:
       - npm run build-prod
   post_build:
     commands:
-      - echo Post build phase!
-artifacts:
-  files:
-    - '**/*'
-  discard-paths: yes
-  base-directory: 'dist'
+      - aws s3 sync ./dist s3://about-myself-web-devops --acl 'public-read' --delete
 cache:
   paths:
     - ./node_modules
