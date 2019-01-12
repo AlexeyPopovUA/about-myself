@@ -12,8 +12,9 @@ phases:
       - echo Post build phase!
 artifacts:
   files:
-    - ./dist/**/*
-  name: about-myself-$(date +%Y-%m-%d)
+    - '**/*'
+  discard-paths: yes
+  base-directory: 'dist'
 cache:
   paths:
     - ./node_modules
