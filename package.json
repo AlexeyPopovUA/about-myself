@@ -44,7 +44,7 @@
     "webpack-bundle-analyzer": "3.0.4",
     "webpack-cli": "3.2.3",
     "webpack-dev-server": "3.2.1",
-    "workbox-webpack-plugin": "3.6.3"
+    "workbox-webpack-plugin": "4.0.0"
   },
   "dependencies": {
     "moment": "^2.23.0",
