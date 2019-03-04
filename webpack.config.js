@@ -36,7 +36,11 @@ module.exports = env => {
             path: path.resolve(__dirname, destinationPath)
         },
         plugins: [
-            new CleanWebpackPlugin([destinationPath]),
+            new CleanWebpackPlugin({
+                cleanOnceBeforeBuildPatterns: ["**/*"],
+                dangerouslyAllowCleanPatternsOutsideProject: true,
+                dry: false
+            }),
             new MiniCssExtractPlugin({
                 filename: '[name].css'
             }),
@@ -54,15 +58,15 @@ module.exports = env => {
                 runtimeCaching: [
                     {
                         urlPattern: new RegExp('.+w3schools.+\.css'),
-                        handler: 'cacheFirst'
+                        handler: 'CacheFirst'
                     },
                     {
                         urlPattern: new RegExp('.+manifest\.json'),
-                        handler: 'cacheFirst'
+                        handler: 'CacheFirst'
                     },
                     {
                         urlPattern: new RegExp('.+\.(js|css|html|png|json)'),
-                        handler: 'networkFirst'
+                        handler: 'NetworkFirst'
                     }
                 ]
             }),
