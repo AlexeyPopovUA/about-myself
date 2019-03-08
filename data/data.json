@@ -3,14 +3,14 @@
     "name": "Oleksii",
     "surname": "Popov",
     "initials": "O.Y.",
-    "position": "JavaScript developer"
+    "position": "Senior Software developer"
   },
   "contacts": {
     "I live in": "Amsterdam, Netherlands",
     "Email": "alexejpopovua@gmail.com",
     "Skype": "brainiacalex",
     "Phone": "+31621548922",
-    "Website": "alexeypopovua.github.io/about-myself",
+    "Website": "https://oleksiipopov.com/",
     "LinkedIn": "linkedin.com/in/alexey-popov-9747a255/",
     "GitHub": "github.com/AlexeyPopovUA",
     "Twitter": "twitter.com/Alexej_Popov"
@@ -26,15 +26,15 @@
     },
     {
       "name": "Programming languages",
-      "description": "Advanced knowledge of JavaScript, TypeScript, HTML, CSS, SCSS. Basic knowledge of Java SE, PHP"
+      "description": "Advanced knowledge of JavaScript, TypeScript, Flow, HTML, CSS, SCSS. Basic knowledge of Java SE, PHP"
     },
     {
       "name": "Frameworks & libraries",
-      "description": "Google Closure Library, JSX, Sencha ExtJS, jQuery, AngularJS"
+      "description": "React/Redux/Saga, JSX, Google Closure Library, Sencha ExtJS, jQuery, Angular"
     },
     {
       "name": "Unit- and automation testing",
-      "description": "Mocha, JSDOM, Jest, Chai, Selenium, Cucumber"
+      "description": "Jest, Mocha, Chai, Selenium, Cucumber"
     },
     {
       "name": "Databases",
@@ -42,7 +42,7 @@
     },
     {
       "name": "Other technologies",
-      "description": "NodeJS, WebPack, Closure Compiler, Sencha, Sumologic, TeamCity, SonarQube, SonarCloud, SonarLint, JSLint, JSHint, Wordpress"
+      "description": "AWS services, NodeJS, WebPack, Closure Compiler, Sencha, Sumologic, TeamCity, SonarQube/Cloud, linters, Wordpress"
     },
     {
       "name": "Version controll",
