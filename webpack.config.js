@@ -50,7 +50,7 @@ module.exports = env => {
                 filename: 'index.html',
                 PRODUCTION: !!env.release,
                 GOOGLE_ANALYTICS_SCRIPT: !!env.release ?
-                    "<script async src=\"https://www.googletagmanager.com/gtag/js?id=UA-127711409-1\"></script>" : ""
+                    "<script async src=\"https://www.googletagmanager.com/gtag/js?id=UA-127711409-3\"></script>" : ""
             }),
             new GenerateSW({
                 clientsClaim: true,
