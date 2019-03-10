@@ -10,7 +10,9 @@ export default class Application {
     run() {
         this.store
             .load()
-            .then(data => preact.render(<MainView renderData={data}/>, document.body))
+            .then(data => {
+                preact.render(<MainView renderData={data}/>, document.body, document.querySelector('.main'))
+            })
             .catch(error => console.error(error));
     }
 }

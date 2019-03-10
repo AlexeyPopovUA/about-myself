@@ -5,6 +5,8 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const {GenerateSW} = require('workbox-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const PrerenderSPAPlugin = require('prerender-spa-plugin');
+
 //const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 module.exports = env => {
@@ -75,6 +77,12 @@ module.exports = env => {
                 {from: './data/data.json', to: "./", flatten: true},
                 {from: './images', to: "./"},
             ]),
+            new PrerenderSPAPlugin({
+                // Required - The path to the webpack-outputted app to prerender.
+                staticDir: path.join(__dirname, 'dist'),
+                // Required - Routes to render.
+                routes: [ '/'],
+            }),
             new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/)/*,
             new BundleAnalyzerPlugin()*/
         ],
