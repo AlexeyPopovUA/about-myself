@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build-release": "webpack --config webpack.config.js --env.prod --env.release",
     "build-prod": "webpack --config webpack.config.js --env.prod",
-    "build-dev": "webpack --config webpack.config.js --env.dev",
+    "build-dev": "webpack --config webpack.config.js --env.dev --display=verbose",
     "dev": "webpack-dev-server --config webpack.config.js --env.dev --env.watch"
   },
   "repository": {
@@ -44,7 +44,8 @@
     "webpack-bundle-analyzer": "3.1.0",
     "webpack-cli": "3.2.3",
     "webpack-dev-server": "3.2.1",
-    "workbox-webpack-plugin": "4.1.0"
+    "workbox-webpack-plugin": "4.1.0",
+    "jsdom": "latest"
   },
   "dependencies": {
     "moment": "^2.23.0",
