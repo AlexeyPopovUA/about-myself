@@ -5,10 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prerender": "node ./prerender.js",
-    "build-release": "webpack --config webpack.config.js --env.prod --env.release && npm run prerender",
-    "build-prod": "webpack --config webpack.config.js --env.prod && npm run prerender",
-    "build-dev": "webpack --config webpack.config.js --env.dev --display=verbose && npm run prerender",
+    "build-release": "webpack --config webpack.config.js --env.prod --env.release",
+    "build-prod": "webpack --config webpack.config.js --env.prod",
+    "build-dev": "webpack --config webpack.config.js --env.dev --display=verbose",
     "dev": "webpack-dev-server --config webpack.config.js --env.dev --env.watch"
   },
   "repository": {
@@ -29,6 +28,7 @@
     "@babel/core": "7.4.3",
     "@babel/plugin-transform-react-jsx": "7.3.0",
     "@babel/preset-env": "7.4.3",
+    "@prerenderer/renderer-jsdom": "^0.2.0",
     "babel-loader": "8.0.5",
     "clean-webpack-plugin": "2.0.1",
     "copy-webpack-plugin": "5.0.2",
@@ -39,6 +39,7 @@
     "jsdom": "14.0.0",
     "mini-css-extract-plugin": "0.6.0",
     "node-sass": "4.11.0",
+    "prerender-spa-plugin": "^3.4.0",
     "sass-loader": "7.1.0",
     "source-map-loader": "0.2.4",
     "style-loader": "0.23.1",
