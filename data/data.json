@@ -26,11 +26,11 @@
     },
     {
       "name": "Programming languages",
-      "description": "Advanced knowledge of JavaScript, TypeScript, Flow, HTML, CSS, SCSS. Basic knowledge of Java SE, PHP"
+      "description": "Advanced knowledge of JavaScript, TypeScript, Flow, JSX, HTML, CSS, SCSS. Basic knowledge of Java SE, PHP"
     },
     {
       "name": "Frameworks & libraries",
-      "description": "React/Redux/Saga, JSX, Google Closure Library, Sencha ExtJS, jQuery, Angular"
+      "description": "React/Redux/Saga, Serverless, Google Closure Library, Sencha ExtJS, jQuery, Angular"
     },
     {
       "name": "Unit- and automation testing",
@@ -38,11 +38,11 @@
     },
     {
       "name": "Databases",
-      "description": "Basic knowledge of MongoDB, GraphQL, MySQL"
+      "description": "Basic knowledge of AWS DynamoDB, MongoDB, GraphQL, MySQL"
     },
     {
       "name": "Other technologies",
-      "description": "AWS services, NodeJS, WebPack, Closure Compiler, Sencha, Sumologic, TeamCity, SonarQube/Cloud, linters, Wordpress"
+      "description": "AWS Services, NodeJS, Webpack, Closure Compiler, Sumologic, TeamCity, SonarQube/Cloud, linters, Wordpress"
     },
     {
       "name": "Version controll",
@@ -85,7 +85,7 @@
       "company": "Albelli (Amsterdam, Netherlands)",
       "title": "Software Developer",
       "dateStart": "April 2016",
-      "dateEnd": "December 2019",
+      "dateEnd": "December 2018",
       "description": "Front end development for online html5 photo editors and mobile application. Development of different tools for debugging/logging/fixing orders etc. in javascript and typescript. Code quality monitoring, performance optimization etc."
     },
     {
@@ -99,7 +99,7 @@
       "company": "Exadel",
       "title": "JavaScript Developer",
       "dateStart": "July 2012",
-      "dateEnd": "February 2013",
+      "dateEnd": "March 2013",
       "description": "Front end developing in Next Wave Logistics (e-commerce project)"
     },
     {
