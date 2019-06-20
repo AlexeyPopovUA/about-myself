@@ -56,24 +56,6 @@ module.exports = env => {
                 GOOGLE_ANALYTICS_SCRIPT: !!env.release ?
                     "<script async src=\"https://www.googletagmanager.com/gtag/js?id=UA-127711409-3\"></script>" : ""
             }),
-            new GenerateSW({
-                clientsClaim: true,
-                skipWaiting: true,
-                runtimeCaching: [
-                    {
-                        urlPattern: new RegExp('.+w3schools.+\.css'),
-                        handler: 'CacheFirst'
-                    },
-                    {
-                        urlPattern: new RegExp('.+manifest\.json'),
-                        handler: 'CacheFirst'
-                    },
-                    {
-                        urlPattern: new RegExp('.+\.(js|css|html|png|json)'),
-                        handler: 'NetworkFirst'
-                    }
-                ]
-            }),
             new CopyWebpackPlugin([
                 {from: './manifest.json', to: "./", flatten: true},
                 {from: './data/data.json', to: "./", flatten: true},
@@ -89,6 +71,35 @@ module.exports = env => {
                     headless: true
                 })
             })] : []),
+            new GenerateSW({
+                include: [
+                    //DO NOT cache HTMLs in watch mode -> you always need it to be up-to-date
+                    //todo keep an eye on it on deployment environments
+                    ...(env.watch === true ? [] : [/\.html$/]),
+                    /\.js$/, /\.css$/, /\.json$/, /\.png/, /\.svg/, /\.ico/, /\.ttf/, /\.otf/, /\.eot/, /\.woff?/
+                ],
+                swDest: `service-worker.js`,
+                importWorkboxFrom: "local",
+                offlineGoogleAnalytics: env.release === true,
+                cleanupOutdatedCaches: true,
+                // sw pre-caching needs to ignore url parameters in order to recognize "home" url
+                // and respond with "./dist/index.html"
+                ignoreURLParametersMatching: [/./],
+                runtimeCaching: [
+                    {
+                        urlPattern: new RegExp('.+w3schools.+\.css'),
+                        handler: 'CacheFirst'
+                    },
+                    {
+                        urlPattern: new RegExp('.+manifest\.json'),
+                        handler: 'NetworkFirst'
+                    },
+                    {
+                        urlPattern: new RegExp('.+\.(js|css|html|png|json)'),
+                        handler: 'NetworkFirst'
+                    }
+                ]
+            }),
             new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/)/*,
             new BundleAnalyzerPlugin()*/
         ],
