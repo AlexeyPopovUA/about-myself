@@ -9,7 +9,6 @@
     "I live in": "Amsterdam, Netherlands",
     "Email": "alexejpopovua@gmail.com",
     "Skype": "brainiacalex",
-    "Phone": "+31621548922",
     "Website": "https://oleksiipopov.com/",
     "LinkedIn": "linkedin.com/in/oleksii-popov-9747a255",
     "GitHub": "github.com/AlexeyPopovUA",
@@ -155,9 +154,9 @@
       "description": "Open-source isomorphic javascript module for reporting data (logs) to remote log storages like SumoLogic and Loggly with support of different reporting strategies",
       "links": [
         {
-          "name": "npm",
+          "name": "website",
           "icon": "",
-          "link": "https://www.npmjs.com/package/advanced-logger"
+          "link": "https://advancedlogger.com"
         },
         {
           "name": "github",
