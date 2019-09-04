@@ -53,8 +53,6 @@ module.exports = env => {
                 template: './index.html',
                 filename: 'index.html',
                 PRODUCTION: !!env.release,
-                GOOGLE_ANALYTICS_SCRIPT: !!env.release ?
-                    "<script async src=\"https://www.googletagmanager.com/gtag/js?id=UA-127711409-3\"></script>" : ""
             }),
             new CopyWebpackPlugin([
                 {from: './manifest.json', to: "./", flatten: true},

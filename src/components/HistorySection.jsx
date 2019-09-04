@@ -2,6 +2,9 @@ import preact from 'preact';
 import CVSection from "./CVSection.jsx";
 import History from "./History.jsx";
 import moment from "moment";
+import 'moment/locale/nl'
+
+moment.locale("nl");
 
 export default class HistorySection extends CVSection {
     render({renderData: props}) {
@@ -9,7 +12,7 @@ export default class HistorySection extends CVSection {
         props = Object.assign(props, {historyData});
         return (
             <div className={`cv-section ${props.cls} w3-card w3-white w3-container w3-margin-bottom`}>
-                <h2 className="cv-section-title w3-text-teal">{`Work history (${props.historyData.total})`}</h2>
+                <h2 className="cv-section-title w3-text-teal">{`Werkervaring (${props.historyData.total})`}</h2>
                 <div className="cv-section-content w3-margin-bottom">
                     <History renderData={historyData.historyItems}/>
                 </div>
@@ -24,23 +27,20 @@ export default class HistorySection extends CVSection {
      */
     getHistoryData(items) {
         const historyDurations = items
-            .map(item => {
-                return moment.duration(
+            .map(item =>
+                moment.duration(
                     (item.dateEnd ? moment(item.dateEnd, 'MMM YYYY', 'en') : moment())
                         .diff(moment(item.dateStart, 'MMM YYYY', 'en'))
-                );
-            });
+                ));
+
         const historyDurationValues = historyDurations
             .map(duration => this.getHumanizedDuration(duration));
 
-        let totalDuration = historyDurations[0];
-        for (let i = 1; i < historyDurations.length - 1; i++) {
-            totalDuration = totalDuration.add(historyDurations[i]);
-        }
+        const totalDuration = historyDurations.reduce((acc, item) => acc.add(item), moment.duration());
 
         //add rendering field
         items.forEach((item, index) => {
-            item.date = `${item.dateStart} - ${item.dateEnd ? item.dateEnd : "Present"} (${historyDurationValues[index]})`;
+            item.date = `${item.dateStart} - ${item.dateEnd ? item.dateEnd : "Nu"} (${historyDurationValues[index]})`;
         });
 
         return {
@@ -51,27 +51,10 @@ export default class HistorySection extends CVSection {
 
     /**
      * Converts "moment" module duration object into the humanized string
-     * @param duration
+     * @param duration {Duration}
      * @returns {string}
      */
     getHumanizedDuration(duration) {
-        const years = duration.years();
-        let months = duration.months();
-        const days = duration.days();
-
-        //correction takes days into account
-        if (days / 31 > 0.75) {
-            months = months + 1;
-        }
-
-        //formatted output
-        const result = [];
-        if (years > 0) {
-            result.push(years === 1 ? `${years} year` : `${years} years`);
-        }
-        if (months > 0) {
-            result.push(months === 1 ? `${months} month` : `${months} months`);
-        }
-        return result.join(" ");
+        return duration.humanize();
     }
 }

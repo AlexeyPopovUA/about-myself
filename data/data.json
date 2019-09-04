@@ -1,169 +1,88 @@
 {
   "user": {
-    "name": "Oleksii",
-    "surname": "Popov",
-    "initials": "O.Y.",
-    "position": "Senior Software developer"
+    "name": "Olena",
+    "surname": "Tymchenko",
+    "initials": "O.O.",
+    "position": "Receptioniste"
   },
   "contacts": {
-    "I live in": "Amsterdam, Netherlands",
-    "Email": "alexejpopovua@gmail.com",
-    "Skype": "brainiacalex",
-    "Website": "https://oleksiipopov.com/",
-    "LinkedIn": "linkedin.com/in/oleksii-popov-9747a255",
-    "GitHub": "github.com/AlexeyPopovUA",
-    "Twitter": "twitter.com/Alexej_Popov"
+    "Adres": "Sara Roosstraat 70, 2041EK",
+    "Woonplaats": "Zandvoort, Nederland",
+    "Email": "alenatymchenko@gmail.com",
+    "Skype": "alenatymchenko"
   },
   "skills": [
     {
-      "name": "OOP",
-      "description": "Good knowledge of object-oriented principles, design patterns, data structures. Design and development of single page applications and libraries."
+      "name": "SEO",
+      "description": "Analyse van de websitestructuur, optimalisatie van webpaginas, copyrighting, communicatie met websitebezoekers, internetmarketing, gebruikersanalyse, rapportage"
     },
     {
-      "name": "Activities",
-      "description": "Application design, code refactoring, performance optimization, unit/integration tests, code review, technical interview, mentorship, tasks planning and estimation"
+      "name": "Bankervaring",
+      "description": "Werk met transfer system (CONTACT, Western Union, UNIStream, Lider, Аnelik, MIGOM, SWIFT), werk met particulieren en bedrijven (bank transfer, rekening opening, geld behering, hypotheek, deposito's en leningen), Administratie werk"
     },
     {
-      "name": "Programming languages",
-      "description": "Advanced knowledge of JavaScript, TypeScript, Flow, JSX, HTML, CSS, SCSS. Basic knowledge of Java SE, PHP"
-    },
-    {
-      "name": "Frameworks & libraries",
-      "description": "React/Redux/Saga, Serverless, Google Closure Library, Sencha ExtJS, jQuery, Angular"
-    },
-    {
-      "name": "Unit- and automation testing",
-      "description": "Jest, Mocha, Chai, Selenium, Cucumber"
-    },
-    {
-      "name": "Databases",
-      "description": "Basic knowledge of AWS DynamoDB, MongoDB, GraphQL, MySQL"
-    },
-    {
-      "name": "Other technologies",
-      "description": "AWS Services, NodeJS, Webpack, Closure Compiler, Sumologic, TeamCity, SonarQube/Cloud, linters, Wordpress"
-    },
-    {
-      "name": "Version controll",
-      "description": "GIT, SVN"
-    },
-    {
-      "name": "I speak",
-      "description": "English, Russian, Ukrainian, Dutch (A2)"
+      "name": "Talen",
+      "description": "Engels, Russisch, Oekraїns, Nederlands"
     }
   ],
-  "certificates": [
-    {
-      "company": "Coursera Course Certificates",
-      "title": "Data structures: Measuring and Optimizing Performance",
-      "date": "November 2015",
-      "link": "https://www.coursera.org/account/accomplishments/verify/23F54S3MXLY7"
-    },
-    {
-      "company": "Coursera Course Certificates",
-      "title": "Object Oriented Programming in Java",
-      "date": "October 2015",
-      "link": "https://www.coursera.org/account/accomplishments/verify/Q43W5UTZT6VZ"
-    },
-    {
-      "company": "Udemy",
-      "title": "Introduction to TypeScript",
-      "date": "July 2015",
-      "link": "https://www.udemy.com/certificate/UC-71722OOL/"
-    }
-  ],
+  "certificates": [],
   "experience": [
     {
-      "company": "TomTom (Amsterdam, Netherlands)",
-      "title": "Senior Software Developer",
-      "dateStart": "January 2019",
-      "dateEnd": "",
-      "description": "Front end development"
+      "company": "Ukrainian hosting (Oekraïne)",
+      "title": "SEO optimizer",
+      "dateStart": "2010",
+      "dateEnd": "2016",
+      "description": "Web paginas optimizatie voor de beter positie in Google en Yandex"
     },
     {
-      "company": "Albelli (Amsterdam, Netherlands)",
-      "title": "Software Developer",
-      "dateStart": "April 2016",
-      "dateEnd": "December 2018",
-      "description": "Front end development for online html5 photo editors and mobile application. Development of different tools for debugging/logging/fixing orders etc. in javascript and typescript. Code quality monitoring, performance optimization etc."
+      "company": "FC Bank (Oekraïne)",
+      "title": "Economist",
+      "dateStart": "2009",
+      "dateEnd": "2010",
+      "description": "Rapporten schrijven, werk met databases, kassstroom controle"
     },
     {
-      "company": "Insoft Global (Ukraine)",
-      "title": "JavaScript Developer",
-      "dateStart": "March 2013",
-      "dateEnd": "March 2016",
-      "description": "Front end and server side developing in cloud management platforms, energy management and infrastructure managementplatforms. Hybrid mobile application POC. Code review, code refactoring, technical interviews, mentorship"
+      "company": "ProCredit Bank (Oekraïne)",
+      "title": "Klantenservice medewerker",
+      "dateStart": "2008",
+      "dateEnd": "2009",
+      "description": "Rapporten schrijven, werk met klanten, accountbeheer, depositoportefeuille, leningenportefeuille, werk met plastic kaarten"
     },
     {
-      "company": "Exadel",
-      "title": "JavaScript Developer",
-      "dateStart": "July 2012",
-      "dateEnd": "March 2013",
-      "description": "Front end developing in Next Wave Logistics (e-commerce project)"
-    },
-    {
-      "company": "Simple Solutions",
-      "title": "Junior PHP Developer",
-      "dateStart": "January 2012",
-      "dateEnd": "July 2012",
-      "description": "Website development using Wordpress, OpenCart. Plugins, widgets, themes development on Wordpress. Preliminary project analysis. Tasks estimation. User guides writing"
-    },
-    {
-      "company": "Simple Solutions",
-      "title": "QA Engineer",
-      "dateStart": "August 2011",
-      "dateEnd": "January 2012",
-      "description": "Manual testing. Specification writing. UI prototyping"
+      "company": "TNS-Oekraїne (Oekraïne)",
+      "title": "Operator interviewer",
+      "dateStart": "2004",
+      "dateEnd": "2008",
+      "description": "Verzameling en primaire verwerking van gegevens voor verder sociologisch onderzoek"
     }
   ],
   "education": [
     {
-      "company": "National Technical University Kharkiv Polytechnical Institute of Ukraine",
+      "company": "Kharkiv Universiteit van Bankbedrijf (Oekraïne)",
       "title": "Master of Science (MSc)",
-      "date": "2009 - 2011",
-      "description": "Mechanical Engineering (Cryogenic technology)"
+      "date": "2007 - 2008",
+      "description": "Bankbedrijf"
     },
     {
-      "company": "National Technical University Kharkiv Polytechnical Institute of Ukraine",
+      "company": "Kharkiv Universiteit van Bankbedrijf (Oekraïne)",
       "title": "Bachelor of Science (BSc)",
-      "date": "2005 - 2009",
-      "description": "Mechanical Engineering (Cryogenic technology)"
+      "date": "2003 - 2007",
+      "description": "Bankbedrijf"
     }
   ],
   "additionalInfo": [
     {
-      "name": "Birthday",
-      "description": "02-04-1988"
+      "name": "Geboortedatum",
+      "description": "24-07-1986 (Oekraïne)"
     },
     {
-      "name": "Marital status",
-      "description": "Partnership"
-    },
-    {
-      "name": "Interests",
-      "description": "Isomorphic javascript applications, TypeScript, full stack applications, highly loaded web applications, design patterns, Java"
+      "name": "Burgerlijke staat",
+      "description": "Geregistreerd partnerschaap"
     },
     {
       "name": "Hobbies",
-      "description": "Photography, travelling, hiking, programming"
+      "description": "Reizen, wandelen, lezen"
     }
   ],
-  "ownProjects": [
-    {
-      "name": "Advanced Logger",
-      "description": "Open-source isomorphic javascript module for reporting data (logs) to remote log storages like SumoLogic and Loggly with support of different reporting strategies",
-      "links": [
-        {
-          "name": "website",
-          "icon": "",
-          "link": "https://advancedlogger.com"
-        },
-        {
-          "name": "github",
-          "icon": "",
-          "link": "https://github.com/AlexeyPopovUA/advanced-logger"
-        }
-      ]
-    }
-  ]
+  "ownProjects": []
 }
