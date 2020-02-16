@@ -1,4 +1,9 @@
+@import "../../styles/vars";
+
 .footer {
+  color: $primary-text-color;
+  padding: 8px 16px !important;
+
   @media print {
     & {
       display: none;

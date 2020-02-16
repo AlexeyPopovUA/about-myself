@@ -4,9 +4,13 @@ import "./../../styles/components/Header.scss";
 export default class Header extends preact.Component {
     render({renderData: props}) {
         return (
-            <header className="header w3-container w3-padding w3-teal w3-margin-bottom">
-                <div className="user-name">{props.name} {props.surname}</div>
-                <div className="position">{props.position}</div>
+            <header className="header hero is-primary">
+                <div className="hero-body">
+                    <div className="container">
+                        <div className="user-name">{props.name} {props.surname}</div>
+                        <div className="position">{props.position}</div>
+                    </div>
+                </div>
             </header>
         );
     }

@@ -1,6 +1,6 @@
 @import "./../vars";
 
-.list-item {
+.section-list-item {
   @media print {
     & {
       font-size: 12px;
@@ -14,5 +14,9 @@
     vertical-align: top;
     text-align: left;
     padding-right: 10px;
+  }
+
+  .item-key {
+    color: $primary-color;
   }
 }

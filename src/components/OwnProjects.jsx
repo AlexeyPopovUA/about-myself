@@ -10,11 +10,11 @@ export default class OwnProjects extends BaseList {
      */
     renderItem(item) {
         return (
-            <div className="list-item w3-row w3-margin-bottom">
-                <div className="item-key w3-text-teal w3-quarter">{item.name}</div>
-                <div className="item-value w3-threequarter">
+            <div className="section-list-item columns">
+                <div className="item-key column is-one-quarter">{item.name}</div>
+                <div className="item-value column">
                     {item.links.map(this.renderLink)}
-                    <div className="description w3-margin-top">{item.description}</div>
+                    <div className="description">{item.description}</div>
                 </div>
             </div>
         );

@@ -17,8 +17,8 @@ export default class MainView extends preact.Component {
         return (
             <div className="main">
                 <Header renderData={props.user}/>
-                <div className="w3-content">
-                    <div className="w3-container sections">
+                <div className="container">
+                    <div className="sections tile is-vertical is-parent">
                         <CVSection renderData={({title: "Contact information", cls: "contacts"})}>
                             <Contacts renderData={Object.keys(props.contacts).map(key => ({key, value: props.contacts[key]}))}/>
                         </CVSection>

@@ -1,8 +1,10 @@
 .certificates {
-  .list-item {
-    .title {
+  .section-list-item {
+    .certificate-title {
       margin-bottom: 10px;
+      text-decoration: underline;
     }
+
     .company-name {
       margin-bottom: 10px;
       font-style: italic;

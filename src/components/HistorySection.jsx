@@ -8,9 +8,9 @@ export default class HistorySection extends CVSection {
         const historyData = this.getHistoryData(props.data);
         props = Object.assign(props, {historyData});
         return (
-            <div className={`cv-section ${props.cls} w3-card w3-white w3-container w3-margin-bottom`}>
-                <h2 className="cv-section-title w3-text-teal">{`Work history (${props.historyData.total})`}</h2>
-                <div className="cv-section-content w3-margin-bottom">
+            <div className={`cv-section ${props.cls} tile is-child box`}>
+                <h2 className="cv-section-title title">{`Work history (${props.historyData.total})`}</h2>
+                <div className="cv-section-content">
                     <History renderData={historyData.historyItems}/>
                 </div>
             </div>

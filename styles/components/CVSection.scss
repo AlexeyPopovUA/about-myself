@@ -1,8 +1,11 @@
+@import "../../styles/vars";
+
 .cv-section {
   .cv-section-title {
     margin-bottom: 10px;
     text-align: center;
     font-size: 18px;
+    color: $primary-color;
 
     @media print {
       & {

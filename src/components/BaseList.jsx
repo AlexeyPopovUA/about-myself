@@ -16,9 +16,9 @@ export default class BaseList extends preact.Component {
      */
     renderItem(item) {
         return (
-            <div className="list-item w3-row w3-margin-bottom">
-                <div className="item-key w3-text-teal w3-quarter">{item.key}</div>
-                <div className="item-value w3-threequarter">{item.value}</div>
+            <div className="section-list-item columns">
+                <div className="item-key column is-one-quarter">{item.key}</div>
+                <div className="item-value column">{item.value}</div>
             </div>
         );
     }

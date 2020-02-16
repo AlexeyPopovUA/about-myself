@@ -71,7 +71,7 @@ module.exports = env => {
                     headless: true
                 })
             })] : []),
-            new GenerateSW({
+            /*new GenerateSW({
                 include: [
                     //DO NOT cache HTMLs in watch mode -> you always need it to be up-to-date
                     //todo keep an eye on it on deployment environments
@@ -99,7 +99,7 @@ module.exports = env => {
                         handler: 'NetworkFirst'
                     }
                 ]
-            }),
+            }),*/
             new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/)/*,
             new BundleAnalyzerPlugin()*/
         ],

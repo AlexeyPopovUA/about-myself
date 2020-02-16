@@ -1,10 +1,19 @@
 @import "vars";
 @import "Print";
 
+@import "~bulma/bulma";
+
+.is-primary {
+  background-color: $primary-color !important;
+}
+
 body {
+  font-family: $main-font-family;
+
   .main {
     a, a:visited {
       color: inherit;
+      text-decoration: underline;
     }
   }
 
@@ -13,9 +22,6 @@ body {
       box-shadow: none !important;
     }
 
-    &.w3-light-grey {
-      background-color: #FFFFFF !important;
-    }
     .sections {
       padding: 0;
     }
