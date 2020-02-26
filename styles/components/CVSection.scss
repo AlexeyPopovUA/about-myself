@@ -7,6 +7,9 @@
     font-size: 18px;
     color: $primary-color;
 
+    font-family: "Segoe UI",Arial,sans-serif;
+    font-weight: 400;
+
     @media print {
       & {
         font-size: 15px;

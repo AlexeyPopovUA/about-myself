@@ -1,6 +1,8 @@
 @import "./../vars";
 
 .section-list-item {
+  margin-bottom: 16px !important;
+
   @media print {
     & {
       font-size: 12px;
@@ -13,10 +15,18 @@
     display: inline-block;
     vertical-align: top;
     text-align: left;
-    padding-right: 10px;
+    padding: 0 10px 0 0 !important;
+  }
+
+  .item-value {
+    width: 100%;
   }
 
   .item-key {
     color: $primary-color;
   }
+}
+
+.columns {
+  margin: 0 0 0 0;
 }
