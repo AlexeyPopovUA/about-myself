@@ -25,9 +25,9 @@
   },
   "homepage": "https://alexeypopovua.github.io/about-myself",
   "devDependencies": {
-    "@babel/core": "7.10.3",
-    "@babel/plugin-transform-react-jsx": "7.10.3",
-    "@babel/preset-env": "7.10.3",
+    "@babel/core": "7.10.4",
+    "@babel/plugin-transform-react-jsx": "7.10.4",
+    "@babel/preset-env": "7.10.4",
     "@prerenderer/renderer-jsdom": "0.2.0",
     "babel-loader": "8.1.0",
     "clean-webpack-plugin": "2.0.2",
