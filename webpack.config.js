@@ -8,8 +8,13 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 //const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const PrerenderSPAPlugin = require('prerender-spa-plugin');
 const jsdomRenderer = require('@prerenderer/renderer-jsdom');
+const SitemapWebpackPlugin = require('sitemap-webpack-plugin').default;
 
 const Renderer = jsdomRenderer;
+
+const paths = [
+    '/'
+];
 
 module.exports = env => {
     console.log(env);
@@ -99,6 +104,11 @@ module.exports = env => {
                         handler: 'NetworkFirst'
                     }
                 ]
+            }),
+            new SitemapWebpackPlugin('https://www.oleksiipopov.com', paths, {
+                lastMod: true,
+                changefreq: 'weekly',
+                priority: '0.7'
             }),
             new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/)/*,
             new BundleAnalyzerPlugin()*/
