@@ -9,10 +9,10 @@
     "I live in": "Amsterdam, Netherlands",
     "Email": "alexejpopovua@gmail.com",
     "Skype": "brainiacalex",
-    "Website": "https://oleksiipopov.com/",
-    "LinkedIn": "linkedin.com/in/oleksii-popov-9747a255",
-    "GitHub": "github.com/AlexeyPopovUA",
-    "Twitter": "twitter.com/Alexej_Popov"
+    "Website": "https://www.oleksiipopov.com",
+    "LinkedIn": "https://linkedin.com/in/oleksii-popov-9747a255",
+    "GitHub": "https://github.com/AlexeyPopovUA",
+    "Twitter": "https://twitter.com/Alexej_Popov"
   },
   "skills": [
     {
@@ -156,7 +156,7 @@
         {
           "name": "website",
           "icon": "",
-          "link": "https://advancedlogger.com"
+          "link": "https://www.advancedlogger.com"
         },
         {
           "name": "github",
