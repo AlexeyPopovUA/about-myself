@@ -1,6 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const {GenerateSW} = require('workbox-webpack-plugin');
@@ -12,24 +12,22 @@ const SitemapWebpackPlugin = require('sitemap-webpack-plugin').default;
 
 const Renderer = jsdomRenderer;
 
-const paths = [
-    '/'
-];
-
 module.exports = env => {
     console.log(env);
 
     const mode = env.prod ? 'production' : 'development';
     const destinationPath = 'dist';
-    const watch = env.watch === true;
+    const watch = !!env.WEBPACK_SERVE;
+    const DEBUG = mode === "development";
 
     return {
+        stats: "verbose",
         entry: {
             index: './src/index.jsx'
         },
         target: "web",
         mode,
-        devtool: "sourcemaps",
+        devtool: "source-map",
         watch,
         watchOptions: {
             aggregateTimeout: 300,
@@ -37,12 +35,26 @@ module.exports = env => {
             ignored: /node_modules/
         },
         devServer: {
-            contentBase: './dist',
-            port: 9000
+            port: 9000,
+            hot: watch,
+            compress: true,
+            client: {
+                logging: "info",
+                progress: true,
+                reconnect: 5,
+                overlay: {
+                    errors: true
+                }
+            }
         },
         output: {
-            filename: '[name].js',
-            path: path.resolve(__dirname, destinationPath)
+            filename: '[name].[contenthash].js',
+            chunkFilename: "[name].[chunkhash].bundle.js",
+            path: path.resolve(__dirname, destinationPath),
+            publicPath: "/"
+        },
+        resolve: {
+            extensions: [".js", ".mjs", ".ts", "tsx", ".scss", ".css", ".json"]
         },
         plugins: [
             new CleanWebpackPlugin({
@@ -51,7 +63,7 @@ module.exports = env => {
                 dry: false
             }),
             new MiniCssExtractPlugin({
-                filename: '[name].css'
+                filename: '[name].[contenthash].css'
             }),
             new HtmlWebpackPlugin({
                 inject: false,
@@ -61,11 +73,13 @@ module.exports = env => {
                 GOOGLE_ANALYTICS_SCRIPT: !!env.release ?
                     "<script async src=\"https://www.googletagmanager.com/gtag/js?id=UA-127711409-3\"></script>" : ""
             }),
-            new CopyWebpackPlugin([
-                {from: './manifest.json', to: "./", flatten: true},
-                {from: './data/data.json', to: "./", flatten: true},
-                {from: './images', to: "./"},
-            ]),
+            new CopyWebpackPlugin({
+                patterns:[
+                    {from: './manifest.json'},
+                    {from: './data/data.json'},
+                    {from: './images'},
+                ]
+            }),
             ...(!watch ? [new PrerenderSPAPlugin({
                 staticDir: path.join(__dirname, 'dist'),
                 outputDir: path.join(__dirname, 'dist'),
@@ -76,7 +90,7 @@ module.exports = env => {
                     headless: true
                 })
             })] : []),
-            new GenerateSW({
+            ...(!watch ? [new GenerateSW({
                 include: [
                     //DO NOT cache HTMLs in watch mode -> you always need it to be up-to-date
                     //todo keep an eye on it on deployment environments
@@ -84,7 +98,6 @@ module.exports = env => {
                     /\.js$/, /\.css$/, /\.json$/, /\.png/, /\.svg/, /\.ico/, /\.ttf/, /\.otf/, /\.eot/, /\.woff?/
                 ],
                 swDest: `service-worker.js`,
-                importWorkboxFrom: "local",
                 offlineGoogleAnalytics: env.release === true,
                 cleanupOutdatedCaches: true,
                 // sw pre-caching needs to ignore url parameters in order to recognize "home" url
@@ -104,20 +117,23 @@ module.exports = env => {
                         handler: 'NetworkFirst'
                     }
                 ]
+            })]:[]),
+            new SitemapWebpackPlugin({
+                base: 'https://www.oleksiipopov.com',
+                paths: [{
+                    path: "/",
+                    lastMod: new Date().toISOString().slice(0, 10),
+                    changeFreq: 'weekly',
+                    priority: 0.7
+                }]
+
             }),
-            new SitemapWebpackPlugin('https://www.oleksiipopov.com', paths, {
-                lastMod: true,
-                changefreq: 'weekly',
-                priority: '0.7'
-            }),
-            new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/)/*,
+            new webpack.IgnorePlugin({
+                resourceRegExp: /^\.\/locale$/,
+                contextRegExp: /moment$/,
+            })/*,
             new BundleAnalyzerPlugin()*/
         ],
-        resolve: {
-            extensions: ['.js', '.mjs'],
-            // todo Resolve the problem with mjs import from node_modules
-            mainFields: ["main", "module"]
-        },
         module: {
             rules: [
                 {
@@ -136,15 +152,17 @@ module.exports = env => {
                 {
                     test: /\.scss$/,
                     use: [
-                        {loader: 'style-loader'},
-                        {loader: MiniCssExtractPlugin.loader},
+                        DEBUG ? "style-loader" : MiniCssExtractPlugin.loader,
                         {loader: 'css-loader'},
                         {
                             loader: 'sass-loader',
                             options: {
-                                includePaths: ["./styles"]
+                                sassOptions: {
+                                    includePaths: ["./styles"]
+                                }
                             }
-                        }
+                        },
+                        {loader: "postcss-loader"}
                     ]
                 },
                 {

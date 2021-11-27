@@ -1,8 +1,8 @@
-import preact from 'preact';
+import React from 'react';
 import "./../../styles/components/Footer.scss";
 import githubIcon from './../../images/GitHub-Mark-Light-120px-plus.png';
 
-export default class Footer extends preact.Component {
+export default class Footer extends React.Component {
     render() {
         return (
             <footer className="w3-container w3-teal w3-padding w3-center footer">

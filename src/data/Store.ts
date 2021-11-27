@@ -1,6 +1,8 @@
 export default class Store {
+    url: string;
+
     constructor(config) {
-        this.url = config.url;
+        this.url = config.url;   
     }
 
     load() {

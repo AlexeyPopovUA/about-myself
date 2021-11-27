@@ -1,6 +1,6 @@
-import preact from 'preact';
-import CVSection from "./CVSection.jsx";
-import History from "./History.jsx";
+import React from 'react';
+import CVSection from "./CVSection.js";
+import History from "./History.js";
 import moment from "moment";
 
 export default class HistorySection extends CVSection {

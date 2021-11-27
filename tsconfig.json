@@ -1,0 +1,29 @@
+{
+    "compilerOptions": {
+      "skipLibCheck": false,
+      "noEmit": true,
+      "baseUrl": ".",
+      "outDir": "dist",
+      "module": "ESNext",
+      "target": "ES6",
+      "lib": ["ESNext", "DOM", "DOM.Iterable"],
+      "sourceMap": true,
+      "allowJs": true,
+      "allowSyntheticDefaultImports": true,
+      "experimentalDecorators": true,
+      "emitDecoratorMetadata": true,
+      "esModuleInterop": true,
+      "jsx": "react",
+      "moduleResolution": "node",
+      "typeRoots": [
+        "./node_modules/@types",
+        "./types"
+      ]
+    },
+    "exclude": [
+      "./*.js",
+      "node_modules",
+      "coverage",
+      "dist"
+    ]
+  }

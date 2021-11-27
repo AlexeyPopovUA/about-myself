@@ -1,6 +1,6 @@
 import Store from "./data/Store";
 import MainView from "./MainView.jsx";
-import preact from 'preact';
+import React from 'react';
 
 export default class Application {
     constructor() {
