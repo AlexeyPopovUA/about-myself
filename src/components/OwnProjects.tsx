@@ -1,5 +1,5 @@
-import preact from 'preact';
-import BaseList from "./BaseList.jsx";
+import React from 'react';
+import BaseList from "./BaseList.js";
 import "./../../styles/components/OwnProjects.scss";
 
 export default class OwnProjects extends BaseList {

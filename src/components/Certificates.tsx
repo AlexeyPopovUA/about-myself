@@ -1,10 +1,10 @@
-import preact from 'preact';
-import BaseList from "./BaseList.jsx";
-import "./../../styles/components/History.scss";
+import React from 'react';
+import BaseList from "./BaseList.js";
+import "./../../styles/components/Certificates.scss";
 
-export default class History extends BaseList {
+export default class Certificates extends BaseList {
     /**
-     * @param {{company: string, title: string, description: string, date: string}} item
+     * @param {{company: string, title: string, link: string, date: string}} item
      * @override
      * @returns {HTMLElement}
      */
@@ -13,9 +13,10 @@ export default class History extends BaseList {
             <div className="list-item w3-row w3-margin-bottom">
                 <div className="item-key w3-text-teal w3-quarter">{item.date}</div>
                 <div className="item-value w3-threequarter">
-                    <div className="title">{item.title}</div>
+                    <div className="title">
+                        <a href={item.link}>{item.title}</a>
+                    </div>
                     <div className="company-name">{item.company}</div>
-                    <div className="description">{item.description}</div>
                 </div>
             </div>
         );

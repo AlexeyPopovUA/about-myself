@@ -1,18 +1,18 @@
-import Header from "./components/Header.jsx";
-import CVSection from "./components/CVSection.jsx";
-import Contacts from "./components/Contacts.jsx";
-import Skills from "./components/Skills.jsx";
-import HistorySection from "./components/HistorySection.jsx";
-import History from "./components/History.jsx";
-import Certificates from "./components/Certificates.jsx";
-import AdditionalInfo from "./components/AdditionalInfo.jsx";
-import OwnProjects from "./components/OwnProjects.jsx";
-import Footer from "./components/Footer.jsx";
+import Header from "./components/Header.js";
+import CVSection from "./components/CVSection.js";
+import Contacts from "./components/Contacts.js";
+import Skills from "./components/Skills.js";
+import HistorySection from "./components/HistorySection.js";
+import History from "./components/History.js";
+import Certificates from "./components/Certificates.js";
+import AdditionalInfo from "./components/AdditionalInfo.js";
+import OwnProjects from "./components/OwnProjects.js";
+import Footer from "./components/Footer.js";
 import "../styles/MainView.scss";
 
-import preact from 'preact';
+import React from 'react';
 
-export default class MainView extends preact.Component {
+export default class MainView extends React.Component {
     render({renderData: props}) {
         return (
             <div className="main">

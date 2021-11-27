@@ -1,5 +1,5 @@
-import preact from 'preact';
-import BaseList from "./BaseList.jsx";
+import React from 'react';
+import BaseList from "./BaseList.js";
 import "./../../styles/components/Contacts.scss";
 
 export default class Contacts extends BaseList {

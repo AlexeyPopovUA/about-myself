@@ -1,7 +1,7 @@
-import preact from 'preact';
+import React from 'react';
 import "./../../styles/components/CVSection.scss";
 
-export default class CVSection extends preact.Component {
+export default class CVSection extends React.Component {
     /**
      * @param {{renderData: {title: string, cls: string, content: *}}} data
      * @returns {HTMLElement}

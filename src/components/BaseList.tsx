@@ -1,7 +1,8 @@
-import preact from 'preact';
+import React from 'react';
+
 import "./../../styles/components/BaseList.scss";
 
-export default class BaseList extends preact.Component {
+export default class BaseList extends React.Component {
     /**
      * @returns {HTMLElement[]}
      */
