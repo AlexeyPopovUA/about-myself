@@ -1,47 +1,44 @@
-import Header from "./components/Header.js";
-import CVSection from "./components/CVSection.js";
-import Contacts from "./components/Contacts.js";
-import Skills from "./components/Skills.js";
-import HistorySection from "./components/HistorySection.js";
-import History from "./components/History.js";
-import Certificates from "./components/Certificates.js";
-import AdditionalInfo from "./components/AdditionalInfo.js";
-import OwnProjects from "./components/OwnProjects.js";
-import Footer from "./components/Footer.js";
+import React from "react";
+
+import Header from "./components/Header";
+import Contacts from "./components/Contacts";
+import Skills from "./components/Skills";
+import History from "./components/History";
+import AdditionalInfo from "./components/AdditionalInfo";
+import OwnProjects from "./components/OwnProjects";
+import Footer from "./components/Footer";
+import data from "./data/data";
+import Education from "./components/Education";
+import Certifications from "./components/Certifications";
+
 import "../styles/MainView.scss";
 
-import React from 'react';
+type Props = {
+    renderData: typeof data;
+};
 
-export default class MainView extends React.Component {
-    render({renderData: props}) {
+export default class MainView extends React.Component<Props> {
+    render() {
         return (
-            <div className="main">
-                <Header renderData={props.user}/>
+            <>
+                <Header
+                    name={this.props.renderData.user.name}
+                    position={this.props.renderData.user.position}
+                    surname={this.props.renderData.user.surname}
+                />
                 <div className="w3-content">
                     <div className="w3-container sections">
-                        <CVSection renderData={({title: "Contact information", cls: "contacts"})}>
-                            <Contacts renderData={Object.keys(props.contacts).map(key => ({key, value: props.contacts[key]}))}/>
-                        </CVSection>
-                        <CVSection renderData={({title: "Skills", cls: "skills"})}>
-                            <Skills renderData={props.skills.map(item => ({key: item.name, value: item.description}))}/>
-                        </CVSection>
-                        <HistorySection renderData={({data: props.experience, cls: "history"})}/>
-                        <CVSection renderData={({title: "Education", cls: "history"})}>
-                            <History renderData={props.education}/>
-                        </CVSection>
-                        <CVSection renderData={({title: "Certifications", cls: "certificates"})}>
-                            <Certificates renderData={props.certificates}/>
-                        </CVSection>
-                        <CVSection renderData={({title: "Own projects", cls: "own-projects"})}>
-                            <OwnProjects renderData={props.ownProjects}/>
-                        </CVSection>
-                        <CVSection renderData={({title: "Additional information", cls: "more"})}>
-                            <AdditionalInfo renderData={props.additionalInfo.map(item => ({key: item.name, value: item.description}))}/>
-                        </CVSection>
+                        <Contacts contacts={this.props.renderData.contacts} />
+                        <Skills skills={this.props.renderData.skills} />
+                        <History experience={this.props.renderData.experience} />
+                        <Education education={this.props.renderData.education} />
+                        <Certifications certificates={this.props.renderData.certificates} />
+                        <OwnProjects projects={this.props.renderData.ownProjects} />
+                        <AdditionalInfo records={this.props.renderData.additionalInfo} />
                     </div>
                 </div>
-                <Footer/>
-            </div>
+                <Footer />
+            </>
         );
     }
 }

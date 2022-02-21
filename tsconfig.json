@@ -1,11 +1,11 @@
 {
     "compilerOptions": {
-      "skipLibCheck": false,
+      "skipLibCheck": true,
       "noEmit": true,
       "baseUrl": ".",
       "outDir": "dist",
       "module": "ESNext",
-      "target": "ES6",
+      "target": "ESNext",
       "lib": ["ESNext", "DOM", "DOM.Iterable"],
       "sourceMap": true,
       "allowJs": true,

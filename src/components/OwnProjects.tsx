@@ -1,35 +1,36 @@
-import React from 'react';
-import BaseList from "./BaseList.js";
+import React from "react";
+
+import data from "../data/data";
+import CVSection from "./CVSection";
+
 import "./../../styles/components/OwnProjects.scss";
 
-export default class OwnProjects extends BaseList {
-    /**
-     * @param {{name: string, description: string, links: string}} item
-     * @override
-     * @returns {HTMLElement}
-     */
-    renderItem(item) {
-        return (
-            <div className="list-item w3-row w3-margin-bottom">
-                <div className="item-key w3-text-teal w3-quarter">{item.name}</div>
-                <div className="item-value w3-threequarter">
-                    {item.links.map(this.renderLink)}
-                    <div className="description w3-margin-top">{item.description}</div>
-                </div>
-            </div>
-        );
-    }
+type Props = {
+    projects: typeof data.ownProjects;
+};
 
-    /**
-     * @private
-     * @param {{name: string, link: string}} linkData
-     * @returns {HTMLElement}
-     */
-    renderLink(linkData) {
+export default class OwnProjects extends React.Component<Props> {
+    render() {
         return (
-            <div className="link">
-                <span>{linkData.name}: <a href={linkData.link}>{linkData.link}</a></span>
-            </div>
+            <CVSection title="Own projects" cls="own-projects">
+                <div className="base-list">
+                    {this.props.projects.map((project) => (
+                        <div key={project.name} className="list-item w3-row w3-margin-bottom">
+                            <div className="item-key w3-text-teal w3-quarter">{project.name}</div>
+                            <div className="item-value w3-threequarter">
+                                {project.links.map((link) => (
+                                    <div key={link.name} className="link">
+                                        <span>
+                                            {link.name}: <a href={link.link}>{link.link}</a>
+                                        </span>
+                                    </div>
+                                ))}
+                                <div className="description w3-margin-top">{project.description}</div>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </CVSection>
         );
     }
 }
