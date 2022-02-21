@@ -6,8 +6,8 @@ frontend:
         - npm ci
     build:
       commands:
-        - if [ "${AWS_BRANCH}" = "master" ]; then npm run build-release; fi
-        - if [ "${AWS_BRANCH}" != "master" ]; then npm run build-prod; fi
+        - if [ "${AWS_BRANCH}" = "master" ]; then npm run build-release && npm run pre-render; fi
+        - if [ "${AWS_BRANCH}" != "master" ]; then npm run build-prod && npm run pre-render; fi
   artifacts:
     baseDirectory: ./dist
     files:
