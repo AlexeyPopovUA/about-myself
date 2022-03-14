@@ -151,16 +151,6 @@ module.exports = env => {
                     }
                 ]
             }),
-            // ...(!watch ? [new PrerenderSPAPlugin({
-            //     staticDir: path.join(__dirname, 'dist'),
-            //     outputDir: path.join(__dirname, 'dist'),
-            //     routes: ['/'],
-            //     renderer: new Renderer({
-            //         //maxConcurrentRoutes: 4,
-            //         //renderAfterElementExists: '.footer',
-            //         //headless: true
-            //     })
-            // })] : []),
             //It's a Workbox service worker plugin
             //@see https://developers.google.com/web/tools/workbox/modules/workbox-webpack-plugin
             ...(!watch
