@@ -102,6 +102,10 @@ module.exports = env => {
                     compatible: {
                         "http-equiv": "X-UA-Compatible",
                         content: "IE=edge"
+                    },
+                    description: {
+                        name: "description",
+                        content: "Online CV of Oleksii Popov, software developer"
                     }
                 },
                 metadata: {
