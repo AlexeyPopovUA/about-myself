@@ -7,7 +7,7 @@ export default {
   },
   "contacts": {
     "I live in": "Amsterdam, Netherlands",
-    "Nationality": "Ukrainian Dutch :)",
+    "Nationality": "Ukrainian and Dutch",
     "Email": "alexejpopovua@gmail.com",
     "Website": "https://www.oleksiipopov.com",
     "LinkedIn": "https://linkedin.com/in/oleksii-popov-9747a255",
@@ -15,12 +15,8 @@ export default {
   },
   "skills": [
     {
-      "name": "OOP",
-      "description": "Good knowledge of object-oriented principles, design patterns, data structures. Design and development of single page applications and libraries."
-    },
-    {
-      "name": "Activities",
-      "description": "Application design, code refactoring, performance optimization, unit/integration tests, code review, technical interview, mentorship, tasks planning and estimation"
+      "name": "General",
+      "description": "Architecture and development of high scale single page applications and libraries. Microservices. Cloud native development (AWS). Good knowledge of object-oriented principles, design patterns, data structures. Code refactoring, performance optimization, unit/integration tests, code review, technical interview, mentorship"
     },
     {
       "name": "Programming languages",
@@ -36,7 +32,7 @@ export default {
     },
     {
       "name": "Other technologies",
-      "description": "Infrastructure as a code with AWS CDK, SDK and Serverless; bundlers like Webpack and Grunt; log collectors like Kibana, Elastic, Sumologic, Scalyr, NewRelic etc; various CI/CD setups like TeamCity, Jenkins, self-written cloud solutions etc; static linters and platforms like ESList, prettify, SonarQube/Cloud; CMS like Wordpress and Netlify; performance analysers like sitespeed.io and Lighthouse"
+      "description": "\"Infrastructure as a code\" with AWS CDK, SDK and Serverless. Bundlers like Webpack and Grunt. Log collectors like Kibana, Elastic, Sumologic, Scalyr, NewRelic etc. Various CI/CD setups like TeamCity, Jenkins, self-written cloud solutions etc. Static linters and platforms like ESList, prettify, SonarQube/Cloud; CMS like Wordpress and Netlify. Performance analysers like sitespeed.io and Lighthouse"
     },
     {
       "name": "I speak",
