@@ -159,10 +159,9 @@ module.exports = env => {
                         include: [
                             /\.js$/,
                             /\.css$/,
+                            /\.xml$/,
                             /\.json$/,
-                            /\.png$/,
-                            /\.jpg$/,
-                            /\.ico$/
+                            /\.png$/
                         ],
                         // update SW often when not a release
                         swDest: `service-worker.js`,
@@ -173,16 +172,12 @@ module.exports = env => {
                         ignoreURLParametersMatching: [/.*/],
                         runtimeCaching: [
                             {
-                                urlPattern: new RegExp(".+.woff(2)?"),
+                                urlPattern: new RegExp(".+\.png$"),
                                 handler: "CacheFirst"
                             },
                             {
-                                urlPattern: new RegExp(".+.png"),
+                                urlPattern: new RegExp('.+w3css\/4\/w3\.css$'),
                                 handler: "CacheFirst"
-                            },
-                            {
-                                urlPattern: new RegExp('.+w3schools.+\.css'),
-                                handler: "StaleWhileRevalidate"
                             }
                         ]
                     })
