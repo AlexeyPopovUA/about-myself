@@ -38,7 +38,7 @@
     "@babel/preset-env": "^7.16.11",
     "@babel/preset-react": "^7.16.7",
     "@babel/preset-typescript": "^7.16.7",
-    "@pmmmwh/react-refresh-webpack-plugin": "^0.5.4",
+    "@pmmmwh/react-refresh-webpack-plugin": "0.5.5",
     "@prerenderer/prerenderer": "^0.7.2",
     "@prerenderer/renderer-jsdom": "^0.2.0",
     "@svgr/webpack": "^6.2.1",
