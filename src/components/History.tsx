@@ -41,7 +41,7 @@ export default class History extends React.Component<Props> {
                             <div className="item-value w3-threequarter">
                                 <div className="title">{item.title}</div>
                                 <div className="company-name">{item.company}</div>
-                                <div className="description">{item.description}</div>
+                                {Array.isArray(item.description) ? item.description.map(descr => <div className="description">{descr}</div>) : <div className="description">{item.description}</div>}
                             </div>
                         </div>
                     ))}
