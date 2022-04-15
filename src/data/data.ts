@@ -70,9 +70,9 @@ export default {
                 "Microservice for authentication and it's infrastructure",
                 "Maintenance and improvements of AWS CI/CD system of https://plan.tomtom.com.",
                 "Feature branches support for a high concurrency automation testing infrastructure for plan.tomtom.com.",
-                "Performance testing dashboard.",
-                "Fullstack development: React, Redux, Thunk, Typescript, nodejs, jest, AWS, aws-cdk, aws-sdk, sitespeed.io, Grafana, Java, Selenium, GitHub actions etc."
-            ]
+                "Performance testing dashboard."
+            ],
+            "stack": "React, Redux, Thunk, Typescript, Docker, nodejs, scss, jest, AWS, aws-cdk, aws-sdk, sitespeed.io, Grafana, Java, Selenium, GitHub actions"
         },
         {
             "company": "TomTom (Amsterdam, Netherlands)",
@@ -83,33 +83,36 @@ export default {
                 "Development and architecture of a next generation Road Trips single page application with pre-rendering, server-side rendering, lazy loading, localization, hot module reloading etc. It was cancelled :( , but re-born in a new route planning SPA - https://plan.tomtom.com.",
                 "CI/CD system with feature branches support, commit checks and notifications in AWS for that web app.",
                 "Reusable npm libraries and their infrastructure with feature branches support, commit checks and notifications.",
-                "High concurrency automation testing infrastructure for SPA that is capable to run Selenium tests in 50+ threads, that runs 270 heavy tests in 3 minutes in cloud instead of 1.5 hours locally.",
+                "High concurrency automation testing infrastructure for the web app.",
                 "Basic performance testing analysis approach and infrastructure with AWS and sitespeed.io.",
                 "Microservices for logs proxying, runtime configuration delivery, different CI/CD webhooks etc.",
-                "Developed a POC service with backend map rendering using mapbox, nodejs and AWS Elastic Beanstalk.",
-                "Fullstack development: React, Redux, Saga, Typescript, nodejs, jest, AWS, Serverless, aws-cdk, aws-sdk, sitespeed.io, Grafana, Java, Selenium etc."
-            ]
+                "Developed a POC service with backend map rendering using mapbox, nodejs and AWS Elastic Beanstalk."
+            ],
+            "stack": "React, Redux, Saga, Typescript, Docker, nodejs, scss, jest, AWS, Serverless, aws-cdk, aws-sdk, sitespeed.io, Grafana, Java, Selenium"
         },
         {
             "company": "Albelli (Amsterdam, Netherlands)",
             "title": "Software Developer",
             "dateStart": "April 2016",
             "dateEnd": "December 2018",
-            "description": "Front end development for online html5 photo editors and mobile application. Development of different tools for debugging/logging/fixing orders etc. in javascript and typescript. Code quality monitoring, performance optimization etc."
+            "description": "Front end development for online html5 photo editors and mobile application. Development of different tools for debugging/logging/fixing orders etc. in javascript and typescript. Code quality monitoring, performance optimization etc.",
+            "stack": "Vanilla js, scss, nodejs, google-closure-library, mocha, Java, Grunt, Selenium"
         },
         {
             "company": "Insoft Global (Ukraine)",
             "title": "JavaScript Developer",
             "dateStart": "March 2013",
             "dateEnd": "March 2016",
-            "description": "Front end and server side developing in cloud management platforms, energy management and infrastructure management platforms. Hybrid mobile application POC. Code review, code refactoring, technical interviews, mentorship"
+            "description": "Front end and server side developing in cloud management platforms, energy management and infrastructure management platforms. Hybrid mobile application POC. Code review, code refactoring, technical interviews, mentorship",
+            "stack": "Sencha ExtJS, scss, nodejs, Java"
         },
         {
             "company": "Exadel",
             "title": "JavaScript Developer",
             "dateStart": "July 2012",
             "dateEnd": "March 2013",
-            "description": "Front end developing in Next Wave Logistics (e-commerce project)"
+            "description": "Front end developing in Next Wave Logistics (e-commerce project)",
+            "stack": "Vanilla js, jquery, css etc."
         },
         {
             "company": "Simple Solutions",

@@ -36,14 +36,26 @@ export default class History extends React.Component<Props> {
             <CVSection cls={"history"} title={`Work history (${this.getHumanizedDuration(totalDuration)})`}>
                 <div className="base-list">
                     {historyItems.map((item) => (
-                        <div key={`${item.company}-${item.title}`} className="list-item w3-row w3-margin-bottom">
-                            <div className="item-key w3-text-teal w3-quarter">{item.date}</div>
-                            <div className="item-value w3-threequarter">
-                                <div className="title">{item.title}</div>
-                                <div className="company-name">{item.company}</div>
-                                {Array.isArray(item.description) ? item.description.map(descr => <div className="description">{descr}</div>) : <div className="description">{item.description}</div>}
+                        <section>
+                            <div key={`${item.company}-${item.title}`} className="list-item w3-row">
+                                <div className="item-key w3-quarter w3-text-teal">
+                                    {item.date}
+                                </div>
+                                <div className="item-value w3-threequarter">
+                                    <div className="title">{item.title}</div>
+                                    <div className="company-name">{item.company}</div>
+                                </div>
                             </div>
-                        </div>
+                            <div key={`${item.company}-${item.title}`} className="list-item w3-row w3-margin-bottom">
+                                <div className="item-key w3-quarter">
+                                    <div className="w3-padding-16 w3-margin-right">{item.stack}</div>
+                                </div>
+                                <div className="item-value w3-threequarter">
+
+                                    {Array.isArray(item.description) ? item.description.map(descr => <p className="description">{descr}</p>) : <p className="description">{item.description}</p>}
+                                </div>
+                            </div>
+                        </section>
                     ))}
                 </div>
             </CVSection>
