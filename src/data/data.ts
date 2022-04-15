@@ -16,7 +16,7 @@ export default {
     "skills": [
         {
             "name": "General",
-            "description": "Architecture and development of high scale single page applications and libraries. Microservices. Cloud native development (AWS). Good knowledge of object-oriented principles, design patterns, data structures. Code refactoring, performance optimization, unit/integration tests, code review, technical interview, mentorship"
+            "description": "Architecture and development of high scale single page applications, libraries and their infrastructure. Microservices. Cloud native development (AWS), infrastructure as a code. Good knowledge of object-oriented principles, design patterns, data structures. Code refactoring, performance optimization, unit/integration tests, code review, technical interview, mentorship"
         },
         {
             "name": "Programming languages",
@@ -66,11 +66,12 @@ export default {
             "dateStart": "March 2021",
             "dateEnd": "",
             "description": [
-                "Development and architecture of a route planning single page application. It's public beta is here -> https://plan.tomtom.com. It is a React PWA application with pre-rendering, lazy loading, localization, hot module reloading and many other fancy things.",
+                "Development and architecture of a new route planning single page application. Public beta: https://plan.tomtom.com. It is a React PWA with pre-rendering, lazy loading, localization, hot module reloading etc.",
+                "Microservice for authentication and it's infrastructure",
                 "Maintenance and improvements of AWS CI/CD system of https://plan.tomtom.com.",
-                "Developed feature branches support for a high concurrency automation testing infrastructure for plan.tomtom.com.",
-                "Developed a performance testing dashboard with AWS, sitespeed.io and Grafana.",
-                "Things used: React, Redux, Thunk, Typescript, nodejs, jest, AWS, aws-cdk, aws-sdk, Java, Selenium, GitHub actions etc."
+                "Feature branches support for a high concurrency automation testing infrastructure for plan.tomtom.com.",
+                "Performance testing dashboard.",
+                "Fullstack development: React, Redux, Thunk, Typescript, nodejs, jest, AWS, aws-cdk, aws-sdk, sitespeed.io, Grafana, Java, Selenium, GitHub actions etc."
             ]
         },
         {
@@ -79,14 +80,14 @@ export default {
             "dateStart": "January 2019",
             "dateEnd": "March 2021",
             "description": [
-                "Development and architecture of a next generation Road Trips single page application with pre-rendering, server-side rendering, lazy loading, localization, hot module reloading etc. It was cancelled :( , but re-born in a new route planning SPA, which is 90% the same and became https://plan.tomtom.com.",
-                "Developed CI/CD system with feature branches support, commit checks and notifications in AWS for that web app.",
-                "Development and architecture of reusable npm ui libraries, sdk's and their infrastructure with feature branches support, commit checks and notifications.",
-                "Developed a high concurrency automation testing infrastructure for SPA that is capable to run Selenium tests in 50+ threads, that runs 270 heavy tests in 3 minutes in cloud instead of 1.5 hours locally.",
-                "Developed a basic performance testing analysis infrastructure with AWS and sitespeed.io.",
-                "Developed microservices for logs proxying, runtime configuration delivery, different CI/CD webhooks etc.",
-                "Developed a POC service with backend map rendering using mapbox and nodejs.",
-                "Things used: React, Redux, Saga, Typescript, nodejs, jest, AWS, Serverless, aws-cdk, aws-sdk, Java, Selenium etc."
+                "Development and architecture of a next generation Road Trips single page application with pre-rendering, server-side rendering, lazy loading, localization, hot module reloading etc. It was cancelled :( , but re-born in a new route planning SPA - https://plan.tomtom.com.",
+                "CI/CD system with feature branches support, commit checks and notifications in AWS for that web app.",
+                "Reusable npm libraries and their infrastructure with feature branches support, commit checks and notifications.",
+                "High concurrency automation testing infrastructure for SPA that is capable to run Selenium tests in 50+ threads, that runs 270 heavy tests in 3 minutes in cloud instead of 1.5 hours locally.",
+                "Basic performance testing analysis approach and infrastructure with AWS and sitespeed.io.",
+                "Microservices for logs proxying, runtime configuration delivery, different CI/CD webhooks etc.",
+                "Developed a POC service with backend map rendering using mapbox, nodejs and AWS Elastic Beanstalk.",
+                "Fullstack development: React, Redux, Saga, Typescript, nodejs, jest, AWS, Serverless, aws-cdk, aws-sdk, sitespeed.io, Grafana, Java, Selenium etc."
             ]
         },
         {
@@ -101,7 +102,7 @@ export default {
             "title": "JavaScript Developer",
             "dateStart": "March 2013",
             "dateEnd": "March 2016",
-            "description": "Front end and server side developing in cloud management platforms, energy management and infrastructure managementplatforms. Hybrid mobile application POC. Code review, code refactoring, technical interviews, mentorship"
+            "description": "Front end and server side developing in cloud management platforms, energy management and infrastructure management platforms. Hybrid mobile application POC. Code review, code refactoring, technical interviews, mentorship"
         },
         {
             "company": "Exadel",
@@ -154,7 +155,7 @@ export default {
         },
         {
             "name": "Technical interests",
-            "description": "Isomorphic, progressive full stack and highly loaded web applications, TypeScript, performance, cloud native development, design patterns"
+            "description": "Isomorphic, progressive, full stack and highly loaded web applications, TypeScript, performance, cloud native development, design patterns"
         },
         {
             "name": "Hobbies",
@@ -180,7 +181,7 @@ export default {
         },
         {
             "name": "Hobby blog for my wife",
-            "description": "Static website generated by Gatsby JS, backed by Netlify CMS and Github as an identity provider and backend. Also AWS lambda for oAuth",
+            "description": "Static website generated by Gatsby JS, backed by Netlify CMS and Github as an identity provider and backend. Also AWS lambda for oAuth via GitHub",
             "links": [
                 {
                     "name": "website",
