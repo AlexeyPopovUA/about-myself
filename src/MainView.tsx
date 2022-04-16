@@ -31,9 +31,9 @@ export default class MainView extends React.Component<Props> {
                         <Contacts contacts={this.props.renderData.contacts} />
                         <Skills skills={this.props.renderData.skills} />
                         <History experience={this.props.renderData.experience} />
+                        <OwnProjects projects={this.props.renderData.ownProjects} />
                         <Education education={this.props.renderData.education} />
                         <Certifications certificates={this.props.renderData.certificates} />
-                        <OwnProjects projects={this.props.renderData.ownProjects} />
                         <AdditionalInfo records={this.props.renderData.additionalInfo} />
                     </div>
                 </div>

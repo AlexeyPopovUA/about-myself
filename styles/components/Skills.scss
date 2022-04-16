@@ -1,0 +1,11 @@
+.skills {
+  .list-item {
+    .item-value :first-child {
+      padding-top: 0;
+    }
+
+    .description {
+      padding-left: 0;
+    }
+  }
+}
