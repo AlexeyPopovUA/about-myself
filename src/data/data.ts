@@ -86,7 +86,7 @@ export default {
                 "High concurrency automation testing infrastructure for the web app.",
                 "Basic performance testing analysis approach and infrastructure with AWS and sitespeed.io.",
                 "Microservices for logs proxying, runtime configuration delivery, different CI/CD webhooks etc.",
-                "Developed a POC service with backend map rendering using mapbox, nodejs and AWS Elastic Beanstalk."
+                "Developed a POC service with backend side map rendering."
             ],
             "stack": "React, Redux, Saga, Typescript, Docker, nodejs, scss, jest, AWS, Serverless, aws-cdk, aws-sdk, sitespeed.io, Grafana, Java, Selenium"
         },
@@ -95,7 +95,11 @@ export default {
             "title": "Software Developer",
             "dateStart": "April 2016",
             "dateEnd": "December 2018",
-            "description": "Front end development for online html5 photo editors and mobile application. Development of different tools for debugging/logging/fixing orders etc. in javascript and typescript. Code quality monitoring, performance optimization etc.",
+            "description": [
+                "Front end development for online html5 photo editors and mobile application.",
+                "Development of different tools for debugging/logging/fixing orders etc. in javascript and typescript.",
+                "Code quality monitoring, performance optimization etc.",
+            ],
             "stack": "Vanilla js, scss, nodejs, google-closure-library, mocha, Java, Grunt, Selenium"
         },
         {
@@ -103,7 +107,11 @@ export default {
             "title": "JavaScript Developer",
             "dateStart": "March 2013",
             "dateEnd": "March 2016",
-            "description": "Front end and server side developing in cloud management platforms, energy management and infrastructure management platforms. Hybrid mobile application POC. Code review, code refactoring, technical interviews, mentorship",
+            "description": [
+                "Front end and server side developing in cloud management platforms, energy management and infrastructure management platforms.",
+                "Hybrid mobile application POC.",
+                "Code review, code refactoring, technical interviews, mentorship",
+            ],
             "stack": "Sencha ExtJS, scss, nodejs, Java"
         },
         {
@@ -119,7 +127,11 @@ export default {
             "title": "Junior PHP Developer",
             "dateStart": "January 2012",
             "dateEnd": "July 2012",
-            "description": "Website development using Wordpress, OpenCart. Plugins, widgets, themes development on Wordpress. Preliminary project analysis. Tasks estimation. User guides writing"
+            "description": [
+                "Website development using Wordpress, OpenCart. Plugins, widgets, themes development on Wordpress.",
+                "Preliminary project analysis. Tasks estimation. User guides writing"
+            ],
+            "stack": "PHP, MySQL, LAMP, WordPress,  Vanilla js, jquery, css etc."
         },
         {
             "company": "Simple Solutions",

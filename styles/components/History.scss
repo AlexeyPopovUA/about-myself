@@ -1,26 +1,27 @@
 .history, .education {
-  .list-item {
-    .title {
-      margin-bottom: 10px;
-    }
+  .history-section {
+    margin-bottom: 32px;
+  }
 
+  .list-item {
     .company-name {
-      margin-bottom: 10px;
       font-style: italic;
     }
 
-    .description {
-      margin-bottom: 10px;
+    .title {
+      text-decoration: underline;
+    }
+
+    .item-value {
+      .description {
+        padding-left: 0;
+      }
     }
 
     @media print {
       .title, .company-name {
         margin-bottom: 5px;
       }
-    }
-
-    .description {
-      word-break: break-word;
     }
   }
 }

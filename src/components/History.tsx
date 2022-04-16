@@ -26,20 +26,17 @@ export default class History extends React.Component<Props> {
             totalDuration = totalDuration.add(historyDurations[i]);
         }
 
-        //add rendering field
-        const historyItems = this.props.experience.map((item, index) => ({
-            ...item,
-            date: `${item.dateStart} - ${item.dateEnd ? item.dateEnd : "Present"} (${historyDurationValues[index]})`
-        }));
-
         return (
-            <CVSection cls={"history"} title={`Work history (${this.getHumanizedDuration(totalDuration)})`}>
+            <CVSection cls="history" title={`Work history (${this.getHumanizedDuration(totalDuration)})`}>
                 <div className="base-list">
-                    {historyItems.map((item) => (
-                        <section>
-                            <div key={`${item.company}-${item.title}`} className="list-item w3-row">
+                    {this.props.experience.map((item, index) => (
+                        <section key={`${item.company}-${item.title}`} className="history-section">
+                            <div className="list-item w3-row">
                                 <div className="item-key w3-quarter w3-text-teal">
-                                    {item.date}
+                                    <div className="w3-margin-right">
+                                        <div>{`${item.dateStart} - ${item.dateEnd ? item.dateEnd : "Present"}`}</div>
+                                        <div>({historyDurationValues[index]})</div>
+                                    </div>
                                 </div>
                                 <div className="item-value w3-threequarter">
                                     <div className="title">{item.title}</div>
@@ -50,10 +47,9 @@ export default class History extends React.Component<Props> {
                                 <div className="item-key w3-quarter">
                                     <div className="w3-padding-16 w3-margin-right">{item.stack}</div>
                                 </div>
-                                <div className="item-value w3-threequarter">
-
-                                    {Array.isArray(item.description) ? item.description.map(descr => <p className="description">{descr}</p>) : <p className="description">{item.description}</p>}
-                                </div>
+                                <ul className="item-value w3-ul w3-threequarter">
+                                    {Array.isArray(item.description) ? item.description.map(descr => <li key={descr.slice(0, 10)} className="description">{descr}</li>) : <li className="description">{item.description}</li>}
+                                </ul>
                             </div>
                         </section>
                     ))}
