@@ -80,6 +80,7 @@ export default {
             dateEnd: "",
             description: [
                 "Development and architecture of a new route planning single page application. Public beta: https://plan.tomtom.com. It is a React PWA with pre-rendering, lazy loading, localization, hot module reloading etc",
+                "Development of the new web SDK for TomTom public services",
                 "Microservice for authentication and it's infrastructure",
                 "Maintenance and improvements of AWS CI/CD system of https://plan.tomtom.com",
                 "Feature branches support for a high concurrency automation testing infrastructure for plan.tomtom.com",
@@ -94,11 +95,11 @@ export default {
             dateEnd: "March 2021",
             description: [
                 "Development and architecture of a next generation Road Trips single page application with pre-rendering, server-side rendering, lazy loading, localization, hot module reloading etc. It was cancelled :( , but re-born in a new route planning SPA - https://plan.tomtom.com",
-                "CI/CD system with feature branches support, commit checks and notifications in AWS for that web app",
-                "Reusable npm libraries and their infrastructure with feature branches support, commit checks and notifications",
+                "CI/CD system with feature branches support in AWS for the web app",
+                "Reusable UI and SDK npm libraries and their infrastructure with feature branches support",
                 "High concurrency automation testing infrastructure for the web app",
-                "Basic performance testing analysis approach and infrastructure with AWS and sitespeed.io",
-                "Microservices for logs proxying, runtime configuration delivery, different CI/CD webhooks etc and their infrastructure",
+                "Basic performance testing analysis approach and infrastructure with AWS",
+                "Microservices for logs proxying, runtime configuration delivery, CI/CD etc and their infrastructure",
                 "Realtime technical log monitoring system",
                 "Developed a POC service with backend side map rendering"
             ],
@@ -185,7 +186,7 @@ export default {
         {
             name: "Technical interests",
             description:
-                "Isomorphic, progressive, full stack and highly loaded web applications, TypeScript, performance, cloud native development, design patterns"
+                "Isomorphic, progressive, full stack and highly loaded web applications, TypeScript, performance, cloud native development, design patterns, system design"
         },
         {
             name: "Hobbies",
