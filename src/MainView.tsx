@@ -34,7 +34,7 @@ export default class MainView extends React.Component<Props> {
                         <OwnProjects projects={this.props.renderData.ownProjects} />
                         <Education education={this.props.renderData.education} />
                         {/*<Certifications certificates={this.props.renderData.certificates} />*/}
-                        <AdditionalInfo records={this.props.renderData.additionalInfo} />
+                        {/*<AdditionalInfo records={this.props.renderData.additionalInfo} />*/}
                     </div>
                 </div>
                 <Footer />
