@@ -4,12 +4,12 @@ import Header from "./components/Header";
 import Contacts from "./components/Contacts";
 import Skills from "./components/Skills";
 import History from "./components/History";
-import AdditionalInfo from "./components/AdditionalInfo";
+//import AdditionalInfo from "./components/AdditionalInfo";
 import OwnProjects from "./components/OwnProjects";
 import Footer from "./components/Footer";
 import data from "./data/data";
 import Education from "./components/Education";
-import Certifications from "./components/Certifications";
+//import Certifications from "./components/Certifications";
 
 import "../styles/MainView.scss";
 

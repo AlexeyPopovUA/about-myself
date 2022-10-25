@@ -43,12 +43,12 @@ export default class History extends React.Component<Props> {
                                     <div className="company-name">{item.company}</div>
                                 </div>
                             </div>
-                            <div key={`${item.company}-${item.title}`} className="list-item w3-row w3-margin-bottom">
+                            <div className="list-item w3-row w3-margin-bottom">
                                 <div className="item-key w3-quarter">
                                     <div className="w3-padding-16 w3-margin-right">{item.stack}</div>
                                 </div>
                                 <ul className="item-value w3-ul w3-threequarter">
-                                    {Array.isArray(item.description) ? item.description.map(descr => <li key={descr.slice(0, 10)} className="description">{descr}</li>) : <li className="description">{item.description}</li>}
+                                    {Array.isArray(item.description) ? item.description.map(descr => <li key={descr.slice(0, 20)} className="description">{descr}</li>) : <li className="description">{item.description}</li>}
                                 </ul>
                             </div>
                         </section>
