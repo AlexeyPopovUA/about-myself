@@ -229,8 +229,7 @@ module.exports = env => {
                     test: /\.(png|jpg|gif|woff(2)?|ttf|eot|otf)$/,
                     include: [
                         path.resolve("./src"),
-                        path.resolve("./resources"),
-                        path.resolve("./sass")
+                        path.resolve("./styles")
                     ],
                     use: [
                         {
@@ -239,28 +238,35 @@ module.exports = env => {
                     ]
                 },
                 {
-                    test: /\.(scss|css)$/,
+                    // Extract any SCSS content and minimize
+                    test: /\.scss$/,
                     use: [
-                        // HMR is working only with style-loader, but not with MiniCssExtractPlugin.loader (not sure why)
-                        DEBUG ? "style-loader" : MiniCssExtractPlugin.loader,
-                        { loader: "css-loader" },
+                        MiniCssExtractPlugin.loader,
+                        { loader: 'css-loader', options: { importLoaders: 1 } },
                         {
-                            loader: "sass-loader",
-                            options: {
-                                sassOptions: {
-                                    includePaths: ["./sass"]
-                                }
-                            }
+                            loader: 'postcss-loader'
                         },
-                        { loader: "postcss-loader" }
+                        {
+                            loader: 'sass-loader',
+                            // options: {
+                            //     plugins: () => [autoprefixer()]
+                            // }
+                        }
+                    ]
+                },
+                {
+                    // Extract any CSS content and minimize
+                    test: /\.css$/,
+                    use: [
+                        MiniCssExtractPlugin.loader,
+                        { loader: 'css-loader', options: { importLoaders: 1 } },
+                        { loader: 'postcss-loader' }
                     ]
                 },
                 {
                     test: /\.svg$/,
                     include: [
-                        path.resolve("./src"),
-                        path.resolve("./resources"),
-                        path.resolve("./sass")
+                        path.resolve("./src")
                     ],
                     use: ["@svgr/webpack", "url-loader"]
                 }
