@@ -6,12 +6,6 @@
 @import "Print";
 
 body {
-  .main {
-    a, a:visited {
-      color: inherit;
-    }
-  }
-
   @media print {
     * {
       box-shadow: none !important;

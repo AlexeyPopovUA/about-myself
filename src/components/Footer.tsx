@@ -4,16 +4,13 @@ import "./../../styles/components/Footer.scss";
 
 import githubIcon from './../../images/GitHub-Mark-Light-120px-plus.png';
 
-export default class Footer extends React.Component {
-    render() {
-        return (
-            <footer className="w3-container w3-teal w3-padding w3-center footer">
-                <div className="author">Developed by O.Popov, 2022</div>
-                <div className="sources">
-                    <img src={githubIcon} className="github-icon" alt="github-icon"/>&nbsp;
-                    <a href="https://github.com/AlexeyPopovUA/about-myself" className="github-link">GitHub sources</a>
-                </div>
-            </footer>
-        );
-    }
-}
+export default () => (
+    <footer className="footer flex flex-col items-center w-full top-0 bg-teal-600 text-white p-4">
+        <div className="author">Developed by O.Popov, 2022</div>
+        <div className="sources flex justify-center items-center">
+            <img src={githubIcon} className="github-icon mx-2" alt="github icon"/>
+            <a href="https://github.com/AlexeyPopovUA/about-myself" className="github-link underline">GitHub
+                sources</a>
+        </div>
+    </footer>
+)

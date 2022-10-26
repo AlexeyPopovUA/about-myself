@@ -31,7 +31,7 @@ export default class History extends React.Component<Props> {
                 <div className="base-list">
                     {this.props.experience.map((item, index) => (
                         <section key={`${item.company}-${item.title}`} className="history-section">
-                            <div className="list-item w3-row">
+                            <div className="cv-list-item w3-row">
                                 <div className="item-key w3-quarter w3-text-teal">
                                     <div className="w3-margin-right">
                                         <div>{`${item.dateStart} - ${item.dateEnd ? item.dateEnd : "Present"}`}</div>
@@ -43,7 +43,7 @@ export default class History extends React.Component<Props> {
                                     <div className="company-name">{item.company}</div>
                                 </div>
                             </div>
-                            <div className="list-item w3-row w3-margin-bottom">
+                            <div className="cv-list-item w3-row w3-margin-bottom">
                                 <div className="item-key w3-quarter">
                                     <div className="w3-padding-16 w3-margin-right">{item.stack}</div>
                                 </div>

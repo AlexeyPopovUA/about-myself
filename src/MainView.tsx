@@ -20,25 +20,23 @@ type Props = {
 export default class MainView extends React.Component<Props> {
     render() {
         return (
-            <>
+            <div className="font-mono">
                 <Header
                     name={this.props.renderData.user.name}
                     position={this.props.renderData.user.position}
                     surname={this.props.renderData.user.surname}
                 />
-                <div className="w3-content">
-                    <div className="w3-container sections">
-                        <Contacts contacts={this.props.renderData.contacts} />
-                        <Skills skills={this.props.renderData.skills} />
-                        <History experience={this.props.renderData.experience} />
-                        <OwnProjects projects={this.props.renderData.ownProjects} />
-                        <Education education={this.props.renderData.education} />
-                        {/*<Certifications certificates={this.props.renderData.certificates} />*/}
-                        {/*<AdditionalInfo records={this.props.renderData.additionalInfo} />*/}
-                    </div>
+                <div className="container mx-auto p-4">
+                    <Contacts contacts={this.props.renderData.contacts} />
+                    <Skills skills={this.props.renderData.skills} />
+                    <History experience={this.props.renderData.experience} />
+                    <OwnProjects projects={this.props.renderData.ownProjects} />
+                    <Education education={this.props.renderData.education} />
+                    {/*<Certifications certificates={this.props.renderData.certificates} />*/}
+                    {/*<AdditionalInfo records={this.props.renderData.additionalInfo} />*/}
                 </div>
                 <Footer />
-            </>
+            </div>
         );
     }
 }

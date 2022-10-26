@@ -15,7 +15,7 @@ export default class OwnProjects extends React.Component<Props> {
             <CVSection title="Own projects" cls="own-projects">
                 <div className="base-list">
                     {this.props.projects.map((project) => (
-                        <div key={project.name} className="list-item w3-row w3-margin-bottom">
+                        <div key={project.name} className="cv-list-item w3-row w3-margin-bottom">
                             <div className="item-key w3-text-teal w3-quarter">{project.name}</div>
                             <div className="item-value w3-threequarter">
                                 {project.links.map((link) => (

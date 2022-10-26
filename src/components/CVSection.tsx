@@ -1,19 +1,13 @@
-import React, { PropsWithChildren } from 'react';
-
-import "./../../styles/components/CVSection.scss";
+import React, {PropsWithChildren} from 'react';
 
 export type CVSectionProps =  PropsWithChildren<{
     title: string;
     cls: string;
 }>;
 
-export default class CVSection extends React.Component<CVSectionProps> {
-    render() {
-        return (
-            <div className={`cv-section ${this.props.cls} w3-card w3-white w3-container w3-margin-bottom`}>
-                <h2 className="cv-section-title w3-text-teal">{this.props.title}</h2>
-                <div className="cv-section-content w3-margin-bottom">{this.props.children}</div>
-            </div>
-        );
-    }
-}
+export default (props: CVSectionProps) => (
+    <div className={`cv-section ${props.cls} w3-card w3-white w3-container w3-margin-bottom`}>
+        <h2 className="cv-section-title text-teal-600 p-4 text-center font-bold">{props.title}</h2>
+        <div className="cv-section-content container">{props.children}</div>
+    </div>
+);

@@ -15,7 +15,7 @@ export default class AdditionalInfo extends React.Component<Props> {
             <CVSection title="Additional information" cls="more">
                 <div className="base-list">
                     {this.props.records.map(record => (
-                        <div key={record.name} className="list-item w3-row w3-margin-bottom">
+                        <div key={record.name} className="cv-list-item w3-row w3-margin-bottom">
                             <div className="item-key w3-text-teal w3-quarter">{record.name}</div>
                             <div className="item-value w3-threequarter">{record.description}</div>
                         </div>
