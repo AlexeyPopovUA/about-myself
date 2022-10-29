@@ -42,7 +42,7 @@
     "@pmmmwh/react-refresh-webpack-plugin": "0.5.8",
     "@prerenderer/prerenderer": "0.7.2",
     "@prerenderer/renderer-jsdom": "0.2.0",
-    "@svgr/webpack": "6.5.0",
+    "@svgr/webpack": "6.5.1",
     "@types/react": "18.0.23",
     "@types/react-dom": "18.0.8",
     "babel-loader": "8.2.5",
