@@ -3,8 +3,6 @@ import React from "react";
 import CVSection from "./CVSection";
 import data from "../data/data";
 
-import "../../styles/components/History.scss";
-
 type Props = {
     education: typeof data.education;
 };
@@ -13,18 +11,16 @@ export default class Education extends React.Component<Props> {
     render() {
         return (
             <CVSection title="Education" cls="history">
-                <div className="base-list">
-                    {this.props.education.map((item) => (
-                        <div key={`${item.company}-${item.title}`} className="cv-list-item w3-row w3-margin-bottom">
-                            <div className="item-key w3-text-teal w3-quarter">{item.date}</div>
-                            <div className="item-value w3-threequarter">
-                                <div className="title">{item.title}</div>
-                                <div className="company-name">{item.company}</div>
-                                <div className="description">{item.description}</div>
-                            </div>
+                {this.props.education.map((item) => (
+                    <div key={`${item.company}-${item.title}`} className="cv-list-item sm:grid sm:grid-cols-4 mb-2">
+                        <div className="item-key text-teal-600 mr-2 mb-2">{item.date}</div>
+                        <div className="item-value col-span-3">
+                            <div className="title underline mb-2">{item.title}</div>
+                            <div className="company-name mb-2"><em>{item.company}</em></div>
+                            <div className="description mb-2">{item.description}</div>
                         </div>
-                    ))}
-                </div>
+                    </div>
+                ))}
             </CVSection>
         );
     }

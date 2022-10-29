@@ -3,8 +3,6 @@ import React from "react";
 import CVSection from "./CVSection";
 import data from "../data/data";
 
-import "./../../styles/components/AdditionalInfo.scss";
-
 type Props = {
     records: typeof data.additionalInfo;
 };
