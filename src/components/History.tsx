@@ -4,8 +4,6 @@ import moment from "moment";
 import CVSection from "./CVSection";
 import data from "../data/data";
 
-import "../../styles/components/History.scss";
-
 type Props = {
     experience: typeof data.experience;
 };
@@ -28,32 +26,30 @@ export default class History extends React.Component<Props> {
 
         return (
             <CVSection cls="history" title={`Work history (${this.getHumanizedDuration(totalDuration)})`}>
-                <div className="base-list">
-                    {this.props.experience.map((item, index) => (
-                        <section key={`${item.company}-${item.title}`} className="history-section">
-                            <div className="cv-list-item w3-row">
-                                <div className="item-key w3-quarter w3-text-teal">
-                                    <div className="w3-margin-right">
-                                        <div>{`${item.dateStart} - ${item.dateEnd ? item.dateEnd : "Present"}`}</div>
-                                        <div>({historyDurationValues[index]})</div>
-                                    </div>
-                                </div>
-                                <div className="item-value w3-threequarter">
-                                    <div className="title">{item.title}</div>
-                                    <div className="company-name">{item.company}</div>
-                                </div>
+                {this.props.experience.map((item, index) => (
+                    <section key={`${item.company}-${item.title}`} className="history-section mb-8">
+                        <div className="cv-list-item sm:grid sm:grid-cols-4 mb-2">
+                            <div className="item-key text-teal-600 mr-2 mb-2">
+                                <div>{`${item.dateStart} - ${item.dateEnd ? item.dateEnd : "Present"}`}</div>
+                                <div>({historyDurationValues[index]})</div>
                             </div>
-                            <div className="cv-list-item w3-row w3-margin-bottom">
-                                <div className="item-key w3-quarter">
-                                    <div className="w3-padding-16 w3-margin-right">{item.stack}</div>
-                                </div>
-                                <ul className="item-value w3-ul w3-threequarter">
-                                    {Array.isArray(item.description) ? item.description.map(descr => <li key={descr.slice(0, 20)} className="description">{descr}</li>) : <li className="description">{item.description}</li>}
-                                </ul>
+                            <div className="item-value col-span-3">
+                                <div className="title underline">{item.title}</div>
+                                <div className="company-name">{item.company}</div>
                             </div>
-                        </section>
-                    ))}
-                </div>
+                        </div>
+                        <div className="cv-list-item sm:grid sm:grid-cols-4">
+                            <div className="item-key mr-2 mb-2">
+                                <em>{item.stack}</em>
+                            </div>
+                            <ul className="item-value col-span-3">
+                                {Array.isArray(item.description) ? item.description.map((descr, i) => <li
+                                        key={descr.slice(0, 20)} className={`description py-1 ${i !== item.description.length - 1 ? "border-b" : ""}`}>{descr}</li>) :
+                                    <li className="description py-1">{item.description}</li>}
+                            </ul>
+                        </div>
+                    </section>
+                ))}
             </CVSection>
         );
     }

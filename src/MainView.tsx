@@ -4,11 +4,11 @@ import Header from "./components/Header";
 import Contacts from "./components/Contacts";
 import Skills from "./components/Skills";
 import History from "./components/History";
-//import AdditionalInfo from "./components/AdditionalInfo";
 import OwnProjects from "./components/OwnProjects";
 import Footer from "./components/Footer";
 import data from "./data/data";
 import Education from "./components/Education";
+//import AdditionalInfo from "./components/AdditionalInfo";
 //import Certifications from "./components/Certifications";
 
 import "../styles/MainView.scss";
@@ -26,7 +26,7 @@ export default class MainView extends React.Component<Props> {
                     position={this.props.renderData.user.position}
                     surname={this.props.renderData.user.surname}
                 />
-                <div className="container mx-auto p-4">
+                <div className="container mx-auto p-2">
                     <Contacts contacts={this.props.renderData.contacts} />
                     <Skills skills={this.props.renderData.skills} />
                     <History experience={this.props.renderData.experience} />
