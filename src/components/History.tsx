@@ -3,6 +3,7 @@ import moment from "moment";
 
 import CVSection from "./CVSection";
 import data from "../data/data";
+import classNames from "classnames";
 
 type Props = {
     experience: typeof data.experience;
@@ -27,10 +28,12 @@ export default class History extends React.Component<Props> {
         return (
             <CVSection cls="history" title={`Work history (${this.getHumanizedDuration(totalDuration)})`}>
                 {this.props.experience.map((item, index) => (
-                    <section key={`${item.company}-${item.title}`} className="history-section mb-8">
-                        <div className="cv-list-item sm:grid sm:grid-cols-4 mb-2">
-                            <div className="item-key text-teal-600 mr-2 mb-2">
-                                <div>{`${item.dateStart} - ${item.dateEnd ? item.dateEnd : "Present"}`}</div>
+                    <section key={`${item.company}-${item.title}`} className={classNames("history-section", {
+                        "pb-4": index !== this.props.experience.length - 1
+                    })}>
+                        <div className="cv-list-item sm:grid sm:grid-cols-4 py-2">
+                            <div className="item-key text-teal-600 pr-4 pb-2">
+                                <div>{`${item.dateStart} - ${item.dateEnd ? item.dateEnd : "Now"}`}</div>
                                 <div>({historyDurationValues[index]})</div>
                             </div>
                             <div className="item-value col-span-3">
@@ -39,13 +42,17 @@ export default class History extends React.Component<Props> {
                             </div>
                         </div>
                         <div className="cv-list-item sm:grid sm:grid-cols-4">
-                            <div className="item-key mr-2 mb-2">
-                                <em>{item.stack}</em>
-                            </div>
+                            <div className="item-key pr-4 pb-2 italic">{item.stack}</div>
                             <ul className="item-value col-span-3">
                                 {Array.isArray(item.description) ? item.description.map((descr, i) => <li
-                                        key={descr.slice(0, 20)} className={`description py-1 ${i !== item.description.length - 1 ? "border-b" : ""}`}>{descr}</li>) :
-                                    <li className="description py-1">{item.description}</li>}
+                                        key={descr.slice(0, 20)}
+                                        className={classNames("description", {
+                                            "border-b": i !== item.description.length - 1,
+                                            "pb-2": i === 0,
+                                            "py-2": i !== 0 && i !== item.description.length - 1,
+                                            "pt-2":  i === item.description.length - 1
+                                        })}>{descr}</li>) :
+                                    <li className="description py-2">{item.description}</li>}
                             </ul>
                         </div>
                     </section>

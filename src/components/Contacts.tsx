@@ -11,7 +11,7 @@ export default (props: Props) => (
     <CVSection title="Contact information" cls="contacts container">
         {Object.keys(props.contacts).map((key) => (
             <div key={key} className="sm:grid sm:grid-cols-4 mb-2">
-                <div className="text-teal-600 mr-2 mb-2">{key}</div>
+                <div className="text-teal-600 pr-4 mb-2">{key}</div>
                 <div className="col-span-3">{ifLinkToLink(props.contacts[key])}</div>
             </div>
         ))}
