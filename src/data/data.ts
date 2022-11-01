@@ -18,7 +18,8 @@ export default {
         {
             name: "General",
             description: [
-                "Architecture and development of high scale single page applications, libraries, microservices and their infrastructure",
+                "Full stack web development with more than 10 years of experience",
+                "Architecture and development of high scale single page applications, UI libraries and SDK's, microservices and their infrastructure",
                 "Cloud native development (AWS), infrastructure as a code",
                 "Application optimization for higher runtime and loading speed and scalability",
                 "Good knowledge of object-oriented principles, design patterns, data structures",
@@ -33,7 +34,7 @@ export default {
         },
         {
             name: "Frameworks & libraries",
-            description: "React/Redux/Saga, NodeJS, vanilla js, Serverless, whatever makes sense :)"
+            description: "React/Redux/Saga, NodeJS, vanilla js, Serverless, Express JS, Storybook, whatever makes sense :)"
         },
         {
             name: "Unit- and automation testing",
@@ -86,7 +87,7 @@ export default {
                 "Feature branches support for a high concurrency automation testing infrastructure for plan.tomtom.com",
                 "Performance testing dashboard"
             ],
-            stack: "React, Redux, Thunk, Typescript, Docker, nodejs, scss, jest, AWS, aws-cdk, aws-sdk, sitespeed.io, Grafana, Java, Selenium, GitHub actions"
+            stack: "React, Redux, Thunk, Typescript, Docker, nodejs, scss, jest, AWS, aws-cdk, aws-sdk, sitespeed.io, Grafana, Storybook, Java, Selenium, GitHub actions"
         },
         {
             company: "TomTom (Amsterdam, Netherlands)",
@@ -103,7 +104,7 @@ export default {
                 "Realtime technical log monitoring system",
                 "Developed a POC service with backend side map rendering"
             ],
-            stack: "React, Redux, Saga, Typescript, Docker, nodejs, scss, jest, AWS, Serverless, aws-cdk, aws-sdk, sitespeed.io, Grafana, Java, Selenium"
+            stack: "React, Redux, Saga, Typescript, Docker, nodejs, scss, jest, AWS, Serverless, aws-cdk, aws-sdk, sitespeed.io, Grafana, Storybook, Express JS, Java, Selenium"
         },
         {
             company: "Albelli (Amsterdam, Netherlands)",
