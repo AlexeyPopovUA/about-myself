@@ -33,27 +33,26 @@ export default class History extends React.Component<Props> {
                     })}>
                         <div className="cv-list-item sm:grid sm:grid-cols-4 py-2">
                             <div className="item-key text-teal-600 pr-4 pb-2">
-                                <div>{`${item.dateStart} - ${item.dateEnd ? item.dateEnd : "Now"}`}</div>
+                                <div
+                                    className="font-bold">{`${item.dateStart} - ${item.dateEnd ? item.dateEnd : "Now"}`}</div>
                                 <div>({historyDurationValues[index]})</div>
                             </div>
-                            <div className="item-value col-span-3">
-                                <div className="title underline">{item.title}</div>
+                            <div className="item-value col-start-2 col-span-3">
+                                <div className="title underline font-bold">{item.title}</div>
                                 <div className="company-name">{item.company}</div>
                             </div>
+                            {item.stack && <div
+                                className="description col-start-2 col-span-3 bg-slate-100 py-2 pr-2 italic">{item.stack}</div>}
                         </div>
                         <div className="cv-list-item sm:grid sm:grid-cols-4">
-                            <div className="item-key pr-4 pb-2 italic">{item.stack}</div>
-                            <ul className="item-value col-span-3">
-                                {Array.isArray(item.description) ? item.description.map((descr, i) => <li
-                                        key={descr.slice(0, 20)}
-                                        className={classNames("description", {
-                                            "border-b": i !== item.description.length - 1,
-                                            "pb-2": i === 0,
-                                            "py-2": i !== 0 && i !== item.description.length - 1,
-                                            "pt-2":  i === item.description.length - 1
-                                        })}>{descr}</li>) :
-                                    <li className="description py-2">{item.description}</li>}
-                            </ul>
+                            {Array.isArray(item.description) ? item.description.map((descr, i) => <div
+                                    key={descr.slice(0, 20)}
+                                    className={classNames("description col-start-2 col-span-3", {
+                                        "border-b": i !== item.description.length - 1,
+                                        "pb-2": i === 0,
+                                        "py-2": i !== 0
+                                    })}>{descr}</div>) :
+                                <div className="description col-start-2 col-span-3 pb-2">{item.description}</div>}
                         </div>
                     </section>
                 ))}

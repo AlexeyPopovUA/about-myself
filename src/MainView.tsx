@@ -24,7 +24,7 @@ export default class MainView extends React.Component<Props> {
                     position={this.props.renderData.user.position}
                     surname={this.props.renderData.user.surname}
                 />
-                <div className="container mx-auto px-2 pt-4">
+                <div className="container mx-auto px-1">
                     <Contacts contacts={this.props.renderData.contacts} />
                     <Skills skills={this.props.renderData.skills} />
                     <History experience={this.props.renderData.experience} />

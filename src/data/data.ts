@@ -10,7 +10,7 @@ export default {
         Nationality: "Ukrainian and Dutch",
         Email: "alexejpopovua@gmail.com",
         Website: "https://www.oleksiipopov.com",
-        LinkedIn: "https://linkedin.com/in/oleksii-popov-9747a255",
+        LinkedIn: "https://www.linkedin.com/in/oleksii-popov/",
         GitHub: "https://github.com/AlexeyPopovUA",
         "I speak": "English, Ukrainian, Russian, Dutch (A2)"
     },
