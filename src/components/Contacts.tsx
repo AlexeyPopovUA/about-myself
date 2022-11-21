@@ -9,12 +9,14 @@ type Props = {
 
 export default (props: Props) => (
     <CVSection title="Contact information" cls="contacts container">
-        {Object.keys(props.contacts).map((key) => (
-            <div key={key} className="sm:grid sm:grid-cols-4 mb-2">
-                <div className="text-teal-600 pr-4 mb-2 font-bold">{key}</div>
-                <div className="col-span-3">{ifLinkToLink(props.contacts[key])}</div>
-            </div>
-        ))}
+        <div className="lg:grid lg:grid-cols-2 lg:pt-4">
+            {Object.keys(props.contacts).map((key) => (
+                <div key={key} className="sm:grid sm:grid-cols-4 mb-2">
+                    <div className="col-span-1 text-teal-600 pr-4 mb-2 font-bold">{key}</div>
+                    <div className="col-span-3">{ifLinkToLink(props.contacts[key])}</div>
+                </div>
+            ))}
+        </div>
     </CVSection>
 )
 
