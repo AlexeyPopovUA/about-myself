@@ -7,6 +7,8 @@ import History from "./components/History";
 import OwnProjects from "./components/OwnProjects";
 import Footer from "./components/Footer";
 import Education from "./components/Education";
+import Intro from "./components/Intro";
+
 import data from "./data/data";
 
 import "../styles/MainView.scss";
@@ -19,13 +21,10 @@ export default class MainView extends React.Component<Props> {
     render() {
         return (
             <div className="font-mono">
-                <Header
-                    name={this.props.renderData.user.name}
-                    position={this.props.renderData.user.position}
-                    surname={this.props.renderData.user.surname}
-                />
+                <Header user={this.props.renderData.user} />
                 <div className="container mx-auto px-1">
-                    <Contacts contacts={this.props.renderData.contacts} />
+                    {/*<Contacts contacts={this.props.renderData.contacts} />*/}
+                    <Intro intro={this.props.renderData.intro} />
                     <Skills skills={this.props.renderData.skills} />
                     <History experience={this.props.renderData.experience} />
                     <OwnProjects projects={this.props.renderData.ownProjects} />

@@ -3,28 +3,35 @@ export default {
         name: "Oleksii",
         surname: "Popov",
         initials: "O.Y.",
-        position: "Expert Software developer at TomTom"
+        position: "Expert Software developer at TomTom",
+        Website: "oleksiipopov.com",
+        LinkedIn: "linkedin.com/in/oleksii-popov",
+        GitHub: "github.com/AlexeyPopovUA",
+        Email: "alexejpopovua@gmail.com",
+        Phone: "+31621548922"
+    },
+    intro: {
+        title: "Intro",
+        description: [
+            "I'm a software developer, based in Netherlands, with more than 10 years of experience in web technologies and passioned about development of products that users love.",
+            "I design and implement full stack solutions that combine frontend, cloud native and backend areas. My main focus is usually on architecture and development of high scale single page applications, UI libraries and SDK's. Implementation of CI/CD, hosting and distribution solutions is a second favourite type of tasks.",
+            "I enjoy working with TypeScript and JavaScript across all stacks, so use them everywhere when possible. Maintaining projects in Java, PHP or any other language has never been a problem.",
+            "I'm excited about application optimization for higher runtime and loading speed of existing projects as well as creation projects from the scratch.",
+            //"I value result higher than a process. Also strongly believe that refactoring and security are 2 infinite processes, but not products",
+            "Dreaming about an opportunity to build own distributed + remote + asynchronous + self-sufficient team around an awesome mind blowing project."
+        ]
     },
     contacts: {
-        "I live in": "Amsterdam, Netherlands",
         Nationality: "Ukrainian and Dutch",
-        Email: "alexejpopovua@gmail.com",
-        Website: "https://www.oleksiipopov.com",
-        LinkedIn: "https://www.linkedin.com/in/oleksii-popov/",
-        GitHub: "https://github.com/AlexeyPopovUA",
         "I speak": "English, Ukrainian, Russian, Dutch (A2)"
     },
     skills: [
         {
             name: "General",
             description: [
-                "Full stack web development with more than 10 years of experience",
-                "Architecture and development of high scale single page applications, UI libraries and SDK's, microservices and their infrastructure",
-                "Cloud native development (AWS), infrastructure as a code",
-                "Application optimization for higher runtime and loading speed and scalability",
+                "Architecture and development of high scale single page applications, UI libraries and SDK's, microservices and their infrastructure. Application optimization for higher runtime and loading speed and scalability",
                 "Good knowledge of object-oriented principles, design patterns, data structures",
-                "Leading development of high quality technical solutions, cross-team collaboration, technical interviews, mentorship, code refactoring and review, unit/integration tests",
-                "Defining the vision, development strategy and priorities for technologies in project"
+                "Leading development of high quality technical solutions, cross-team collaboration, technical interviews, mentorship, code refactoring and review, unit/integration tests. Defining the vision, development strategy and priorities for technologies in projects"
             ]
         },
         {
@@ -37,7 +44,7 @@ export default {
             description: "React/Redux/Saga, NodeJS, vanilla js, Serverless, Express JS, Storybook, whatever makes sense :)"
         },
         {
-            name: "Unit- and automation testing",
+            name: "Testing",
             description: "Jest, Mocha, Selenium, Cucumber"
         },
         {
