@@ -4,9 +4,9 @@ export default {
         surname: "Popov",
         initials: "O.Y.",
         position: "Expert Software developer at TomTom",
-        Website: "oleksiipopov.com",
-        LinkedIn: "linkedin.com/in/oleksii-popov",
-        GitHub: "github.com/AlexeyPopovUA",
+        Website: {title: "oleksiipopov.com", url: "https://oleksiipopov.com"},
+        LinkedIn: {title: "linkedin.com/in/oleksii-popov", url: "https://linkedin.com/in/oleksii-popov"},
+        GitHub: {title: "github.com/AlexeyPopovUA", url: "https://github.com/AlexeyPopovUA"},
         Email: "alexejpopovua@gmail.com",
         Phone: "+31621548922"
     },
