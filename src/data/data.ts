@@ -87,12 +87,12 @@ export default {
             dateStart: "March 2021",
             dateEnd: "",
             description: [
-                "Development and architecture of a new route planning single page application. Public beta: https://plan.tomtom.com. It is a React PWA with pre-rendering, lazy loading, localization, hot module reloading etc",
-                "Development of the new web SDK for TomTom public services",
-                "Microservice for authentication and it's infrastructure",
-                "Maintenance and improvements of AWS CI/CD system of https://plan.tomtom.com",
-                "Feature branches support for a high concurrency automation testing infrastructure for plan.tomtom.com",
-                "Performance testing dashboard"
+                "Designed and developed the core part of a new route planning single page application - https://plan.tomtom.com (public beta). It is a React PWA with pre-rendering, lazy loading, localization, hot module reloading etc",
+                "Started development of the new web SDK for TomTom public services and it's distribution infrastructure. ",
+                "Implemented a microservice for authentication and it's infrastructure",
+                "Supported and improved AWS CI/CD system for https://plan.tomtom.com",
+                "Added feature branches support for a high concurrency automation testing infrastructure of https://plan.tomtom.com with feature branch matching between projects",
+                "Implemented performance testing dashboard for the existing performance metric collection system"
             ],
             stack: "React, Redux, Thunk, Typescript, Docker, nodejs, scss, jest, AWS, aws-cdk, aws-sdk, sitespeed.io, Grafana, Storybook, Java, Selenium, GitHub actions"
         },
@@ -102,26 +102,26 @@ export default {
             dateStart: "January 2019",
             dateEnd: "March 2021",
             description: [
-                "Development and architecture of a next generation Road Trips single page application with pre-rendering, server-side rendering, lazy loading, localization, hot module reloading etc. It was cancelled :( , but re-born in a new route planning SPA - https://plan.tomtom.com",
-                "CI/CD system with feature branches support in AWS for the web app",
-                "Reusable UI and SDK npm libraries and their infrastructure with feature branches support",
-                "High concurrency automation testing infrastructure for the web app",
-                "Basic performance testing analysis approach and infrastructure with AWS",
-                "Microservices for logs proxying, runtime configuration delivery, CI/CD etc and their infrastructure",
-                "Realtime technical log monitoring system",
+                "Designed and developed significant part of a next generation mobile friendly Road Trips single page application with pre-rendering, server-side rendering, lazy loading, localization, hot module reloading etc. This project was cancelled :( , but re-born in a new route planning web app - https://plan.tomtom.com",
+                "Implemented AWS CI/CD system with feature branches support for the web app",
+                "Initiated and implemented basis of reusable UI and SDK npm libraries and their distribution infrastructure with feature branches support. That accelerated and simplified collaboration between mobile and web development teams",
+                "Implemented high concurrency automation testing infrastructure for the web app that minimized execution time of Selenium java tests from 2 hours to 3 - 5 minutes. Also integrated it with existing CI/CD of the web app.",
+                "Implemented POC of basic performance testing analysis for web app and infrastructure in AWS, which became a part of regular team workflow.",
+                "Implemented microservices for logs proxying, runtime configuration delivery, CI/CD etc and their infrastructure",
+                "Implemented POC of realtime technical log monitoring system which became a part of team workflow",
                 "Developed a POC service with backend side map rendering"
             ],
             stack: "React, Redux, Saga, Typescript, Docker, nodejs, scss, jest, AWS, Serverless, aws-cdk, aws-sdk, sitespeed.io, Grafana, Storybook, Express JS, Java, Selenium"
         },
         {
             company: "Albelli (Amsterdam, Netherlands)",
-            title: "Software Developer",
+            title: "Software developer / Senior software developer",
             dateStart: "April 2016",
             dateEnd: "December 2018",
             description: [
-                "Front end development for online html5 photo editors and mobile application",
-                "Development of different tools for debugging/logging/fixing orders",
-                "Code quality monitoring, performance optimization"
+                "Participated in development and maintenance of online photo editors and hybrid mobile application",
+                "Developed different tools for debugging, logging and fixing customer issues",
+                "Set up code quality monitoring system"
             ],
             stack: "Vanilla js, typescript, scss, nodejs, google-closure-library, mocha, Java, Grunt, Selenium"
         },
@@ -131,8 +131,8 @@ export default {
             dateStart: "March 2013",
             dateEnd: "March 2016",
             description: [
-                "Front end and server side developing in cloud management platforms, energy management and infrastructure management platforms.",
-                "Hybrid mobile application POC.",
+                "Participated in front end and server side development of cloud management platforms, energy management and infrastructure management platforms.",
+                "Implemented POC of a hybrid mobile application",
                 "Code review, code refactoring, technical interviews, mentorship"
             ],
             stack: "Sencha ExtJS, scss, nodejs, Java"
@@ -142,7 +142,7 @@ export default {
             title: "JavaScript Developer",
             dateStart: "July 2012",
             dateEnd: "March 2013",
-            description: "Front end developing in Next Wave Logistics (e-commerce project)",
+            description: "Participated in front end development of a Next Wave Logistics (e-commerce project)",
             stack: "Vanilla js, jquery, css etc."
         },
         {
@@ -151,7 +151,7 @@ export default {
             dateStart: "January 2012",
             dateEnd: "July 2012",
             description: [
-                "Website development using Wordpress, OpenCart. Plugins, widgets, themes development on Wordpress.",
+                "Developed numerous websites using Wordpress and OpenCart. Implemented plugins, widgets and themes for Wordpress.",
                 "Preliminary project analysis. Tasks estimation. User guides writing"
             ],
             stack: "PHP, MySQL, LAMP, WordPress,  Vanilla js, jquery, css etc."
@@ -194,11 +194,11 @@ export default {
         {
             name: "Technical interests",
             description:
-                "Isomorphic, progressive, full stack and highly loaded web applications, TypeScript, performance, cloud native development, design patterns, system design"
+                "Static site generators. Infrastructure as a code. Isomorphic, progressive, full stack and highly loaded web applications.Design patterns. System design"
         },
         {
             name: "Hobbies",
-            description: "Photography, travelling, hiking, programming, home lab cloud (self-hosting of everything)"
+            description: "Photography, travelling, hiking, programming, home lab (self-hosting)"
         }
     ],
     ownProjects: [
