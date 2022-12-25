@@ -7,7 +7,7 @@ type Props = {
 }
 
 export default (props: Props) => {
-    const websites = [props.user.Website, props.user.GitHub, props.user.LinkedIn];
+    const websites = [props.user.Website, props.user.GitHub, props.user.LinkedIn].filter(Boolean);
     const contacts = [props.user.Email, props.user.Phone];
 
     return (
@@ -23,7 +23,7 @@ export default (props: Props) => {
             </div>
             <div className="contacts text-center text-sm md:grid md:grid-cols-3 gap-1 pt-2 w-full">
                 {contacts.map(contact => (
-                    <div className="md:col-span-1">{contact}</div>
+                    <div key={contact} className="md:col-span-1">{contact}</div>
                 ))}
             </div>
         </header>
