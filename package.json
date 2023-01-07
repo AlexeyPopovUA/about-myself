@@ -63,7 +63,7 @@
     "postcss": "8.4.21",
     "postcss-loader": "7.0.2",
     "postcss-scss": "4.0.6",
-    "prettier": "2.8.1",
+    "prettier": "2.8.2",
     "react-refresh": "0.14.0",
     "sass-loader": "13.2.0",
     "sitemap-webpack-plugin": "1.1.1",
