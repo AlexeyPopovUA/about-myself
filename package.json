@@ -40,7 +40,7 @@
     "@babel/preset-react": "7.18.6",
     "@babel/preset-typescript": "7.18.6",
     "@pmmmwh/react-refresh-webpack-plugin": "0.5.10",
-    "@prerenderer/prerenderer": "0.7.2",
+    "@prerenderer/prerenderer": "1.0.3",
     "@prerenderer/renderer-jsdom": "0.2.0",
     "@svgr/webpack": "6.5.1",
     "@types/react": "18.0.27",
