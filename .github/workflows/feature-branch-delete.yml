@@ -1,0 +1,42 @@
+name: Feature branch delete
+
+on:
+  delete:
+    branches:
+      - '**'
+
+  workflow_dispatch:
+
+env:
+  DEFAULT_BRANCH: master
+  AWS_HOSTING_S3_BUCKET: "about-myself-hosting"
+  AWS_AUTH_ROLE: "arn:aws:iam::026090449790:role/gha-aws-oidc-oidbc-prod-ghaawsoidcroleprodADA66B76-16JXA65ME5F0Z"
+
+jobs:
+  delete:
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
+
+    steps:
+#     TODO Extract into a re-usable action
+      - name: Prepare variables
+        shell: bash
+        run: |
+          if [ $GITHUB_EVENT_NAME == 'delete' ]
+          then
+            SOURCE=${{ github.event.ref }}
+          else
+            SOURCE=${{ github.ref_name }}
+          fi
+          echo SAFE_SOURCE_NAME=$(echo "$SOURCE" | sed -r 's/[/.@_]+/-/g') >> $GITHUB_ENV
+
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-region: eu-west-1
+          role-to-assume: ${{ env.AWS_AUTH_ROLE }}
+
+      - name: Remove demo directory
+        run: aws s3 rm s3://${{ env.AWS_HOSTING_S3_BUCKET }}}/${{ env.SAFE_SOURCE_NAME }}/ --recursive
