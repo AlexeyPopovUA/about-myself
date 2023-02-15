@@ -39,4 +39,4 @@ jobs:
           role-to-assume: ${{ env.AWS_AUTH_ROLE }}
 
       - name: Remove demo directory
-        run: aws s3 rm s3://${{ env.AWS_HOSTING_S3_BUCKET }}}/${{ env.SAFE_SOURCE_NAME }}/ --recursive
+        run: aws s3 rm s3://${{ env.AWS_HOSTING_S3_BUCKET }}/${{ env.SAFE_SOURCE_NAME }}/ --recursive
