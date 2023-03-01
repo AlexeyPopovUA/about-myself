@@ -72,7 +72,9 @@ export default class History extends React.Component<Props> {
 
         //correction takes days into account
         if (days / 31 > 0.75) {
-            months = months + 1;
+            duration.add(1, "month");
+            duration.subtract(days, "day");
+            months = duration.months();
         }
 
         //formatted output
