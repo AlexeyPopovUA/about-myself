@@ -4,21 +4,19 @@ export default {
         surname: "Popov",
         initials: "O.Y.",
         position: "Expert Software developer at TomTom",
-        Website: {title: "oleksiipopov.com", url: "https://oleksiipopov.com"},
-        LinkedIn: {title: "linkedin.com/in/oleksii-popov", url: "https://linkedin.com/in/oleksii-popov"},
-        GitHub: {title: "github.com/AlexeyPopovUA", url: "https://github.com/AlexeyPopovUA"},
+        Website: { title: "oleksiipopov.com", url: "https://oleksiipopov.com" },
+        LinkedIn: { title: "linkedin.com/in/oleksii-popov", url: "https://linkedin.com/in/oleksii-popov" },
+        GitHub: { title: "github.com/AlexeyPopovUA", url: "https://github.com/AlexeyPopovUA" },
         Email: "alexejpopovua@gmail.com",
         Phone: "+31621548922"
     },
     intro: {
         title: "Intro",
         description: [
-            "I'm a software developer, based in Netherlands, with more than 10 years of experience in web technologies and passioned about development of products that users love.",
-            "I design and implement full stack solutions that combine frontend, cloud native and backend areas. My main focus is usually on architecture and development of high scale single page applications, UI libraries and SDK's. Implementation of CI/CD, hosting and distribution solutions is a second favourite type of tasks.",
-            "I enjoy working with TypeScript and JavaScript across all stacks, so use them everywhere when possible. Maintaining projects in Java, PHP or any other language has never been a problem.",
-            "I'm excited about application optimization for higher runtime and loading speed of existing projects as well as creation projects from the scratch.",
-            //"I value result higher than a process. Also strongly believe that refactoring and security are 2 infinite processes, but not products",
-            "Dreaming about an opportunity to build own distributed + remote + asynchronous + self-sufficient team around an awesome mind blowing project."
+            "I am a skilled software developer with 11 years of experience in web technologies. I am passionate about developing user-friendly products and have a track record of designing and implementing full-stack solutions, combining frontend, cloud native, and backend areas. My expertise lies in the architecture and development of high-scale single page applications, UI libraries, and SDKs, as well as in the implementation of CI/CD, hosting, and distribution solutions.",
+            "I am proficient in TypeScript and JavaScript across all stacks and use them whenever possible. However, I am also experienced in maintaining projects in other languages such as Java and PHP.",
+            "I am enthusiastic about optimizing applications for improved runtime and faster loading speeds, both for existing projects and new ones.",
+            "I am looking for an opportunity to build a distributed, remote, asynchronous, and self-sufficient team around an exciting project."
         ]
     },
     contacts: {
