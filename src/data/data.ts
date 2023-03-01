@@ -20,7 +20,7 @@ export default {
         ]
     },
     contacts: {
-        Nationality: "Ukrainian and Dutch",
+        Nationality: "Dutch",
         "I speak": "English, Ukrainian, Russian, Dutch (A2)"
     },
     skills: [
@@ -49,7 +49,8 @@ export default {
             name: "Other technologies",
             description: [
                 "\"Infrastructure as a code\" with AWS CDK, SDK and Serverless",
-                "Bundlers like Webpack and Grunt",
+                "Bundlers like Webpack, Rollup and Grunt",
+                "CLI tools like Lerna and NPM",
                 "Log collectors like Kibana, Elastic, Sumologic, Scalyr, NewRelic",
                 "Various CI/CD setups like TeamCity, Jenkins, self-written cloud solutions",
                 "Static linters and platforms like ESList, prettify, SonarQube/Cloud",
