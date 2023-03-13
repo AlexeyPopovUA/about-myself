@@ -7,6 +7,7 @@ export default {
         Website: { title: "oleksiipopov.com", url: "https://oleksiipopov.com" },
         LinkedIn: { title: "linkedin.com/in/oleksii-popov", url: "https://linkedin.com/in/oleksii-popov" },
         GitHub: { title: "github.com/AlexeyPopovUA", url: "https://github.com/AlexeyPopovUA" },
+        Blog: { title: "blog.oleksiipopov.com", url: "https://blog.oleksiipopov.com" },
         Email: "alexejpopovua@gmail.com",
         Phone: "+31621548922"
     },
@@ -215,6 +216,17 @@ export default {
                     name: "GitHub",
                     icon: "",
                     link: "https://github.com/AlexeyPopovUA/advanced-logger"
+                }
+            ]
+        },
+        {
+            name: "My Software Development blog (early stage)",
+            description: "It is a wordpress.com powered blog",
+            links: [
+                {
+                    name: "Website",
+                    icon: "",
+                    link: "https://blog.oleksiipopov.com"
                 }
             ]
         },
