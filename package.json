@@ -58,7 +58,7 @@
     "html-minifier": "4.0.0",
     "html-webpack-plugin": "5.5.0",
     "jsdom": "21.1.1",
-    "mini-css-extract-plugin": "2.7.3",
+    "mini-css-extract-plugin": "2.7.5",
     "node-sass": "8.0.0",
     "postcss": "8.4.21",
     "postcss-loader": "7.0.2",
