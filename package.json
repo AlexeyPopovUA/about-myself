@@ -43,7 +43,7 @@
     "@prerenderer/prerenderer": "1.2.0",
     "@prerenderer/renderer-jsdom": "1.1.2",
     "@svgr/webpack": "7.0.0",
-    "@types/react": "18.0.32",
+    "@types/react": "18.0.33",
     "@types/react-dom": "18.0.11",
     "autoprefixer": "^10.4.13",
     "babel-loader": "9.1.2",
