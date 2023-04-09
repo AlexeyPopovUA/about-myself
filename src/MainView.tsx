@@ -21,7 +21,7 @@ export default class MainView extends React.Component<Props> {
     render() {
         return (
             <div className="font-mono">
-                <Header user={this.props.renderData.user} />
+                <Header user={this.props.renderData.user} contacts={this.props.renderData.contacts} />
                 <div className="container mx-auto px-1">
                     {/*<Contacts contacts={this.props.renderData.contacts} />*/}
                     <Intro intro={this.props.renderData.intro} />

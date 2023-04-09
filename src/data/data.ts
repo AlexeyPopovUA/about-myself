@@ -8,7 +8,8 @@ export default {
         LinkedIn: { title: "linkedin.com/in/oleksii-popov", url: "https://linkedin.com/in/oleksii-popov" },
         GitHub: { title: "github.com/AlexeyPopovUA", url: "https://github.com/AlexeyPopovUA" },
         Blog: { title: "blog.oleksiipopov.com", url: "https://blog.oleksiipopov.com" },
-        Email: "alexejpopovua@gmail.com",
+        Email: "opportunities@oleksiipopov.com",
+        Address: "Amsterdam, Netherlands",
         Phone: "+31621548922"
     },
     intro: {
@@ -89,6 +90,7 @@ export default {
             description: [
                 "Designed and developed the core part of a new route planning single page application - https://plan.tomtom.com (public beta). It is a React PWA with pre-rendering, lazy loading, localization, hot module reloading etc",
                 "Started development of the new web SDK for TomTom public services and it's distribution infrastructure. ",
+                "Designed and implemented a micro-frontend app for convenient exploration of numerous library demo apps",
                 "Implemented a microservice for authentication and it's infrastructure",
                 "Supported and improved AWS CI/CD system for https://plan.tomtom.com",
                 "Added feature branches support for a high concurrency automation testing infrastructure of https://plan.tomtom.com with feature branch matching between projects",
