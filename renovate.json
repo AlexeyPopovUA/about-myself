@@ -1,10 +1,9 @@
 {
-  "extends": [
-    "config:base"
-  ],
-  "automerge": true,
-  "schedule": [
-    "after 8am every weekend",
-    "before 7pm every weekend"
-  ]
+    "extends": [
+        "config:base",
+        ":timezone(Europe/Amsterdam)",
+        ":interval(monthly)"
+    ],
+    "schedule": "every weekend at 08:00-20:00",
+    "automerge": true
 }
