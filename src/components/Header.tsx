@@ -8,7 +8,7 @@ type Props = {
 }
 
 export default (props: Props) => {
-    const websites = [props.user.Website, props.user.Blog, props.user.GitHub, props.user.LinkedIn];
+    const websites = [props.user.Website, props.user.Blog, props.user.Portfolio, props.user.GitHub, props.user.LinkedIn];
     const contacts = [props.user.Address, props.user.Email, props.user.Phone, `I speak ${props.contacts["I speak"]}`];
 
     return (

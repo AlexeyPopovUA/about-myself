@@ -8,6 +8,7 @@ export default {
         LinkedIn: { title: "linkedin.com/in/oleksii-popov", url: "https://linkedin.com/in/oleksii-popov" },
         GitHub: { title: "github.com/AlexeyPopovUA", url: "https://github.com/AlexeyPopovUA" },
         Blog: { title: "blog.oleksiipopov.com", url: "https://blog.oleksiipopov.com" },
+        Portfolio: { title: "blog.oleksiipopov.com/portfolio", url: "https://blog.oleksiipopov.com/portfolio" },
         Email: "opportunities@oleksiipopov.com",
         Address: "Amsterdam, Netherlands",
         Phone: "+31621548922"
