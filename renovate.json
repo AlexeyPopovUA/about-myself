@@ -1,8 +1,7 @@
 {
     "extends": [
         "config:base",
-        ":timezone(Europe/Amsterdam)",
-        ":interval(monthly)"
+        ":timezone(Europe/Amsterdam)"
     ],
     "schedule": [
         "after 8am every weekend",
