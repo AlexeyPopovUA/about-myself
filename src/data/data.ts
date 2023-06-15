@@ -3,7 +3,7 @@ export default {
         name: "Oleksii",
         surname: "Popov",
         initials: "O.Y.",
-        position: "Expert Software developer at TomTom",
+        position: "Fullstack Software Engineer (React/NodeJS/TypeScript/AWS)",
         Website: { title: "oleksiipopov.com", url: "https://oleksiipopov.com" },
         LinkedIn: { title: "linkedin.com/in/oleksii-popov", url: "https://linkedin.com/in/oleksii-popov" },
         GitHub: { title: "github.com/AlexeyPopovUA", url: "https://github.com/AlexeyPopovUA" },
@@ -30,7 +30,7 @@ export default {
         {
             name: "General",
             description: [
-                "Architecture and development of high scale single page applications, UI libraries and SDK's, microservices and their infrastructure. Application optimization for higher runtime and loading speed and scalability",
+                "Architecture and development of high scale single page applications, UI libraries and SDK's, microservices and their infrastructure. System design of full-stack solutions. Application optimization for higher runtime and loading speed and scalability",
                 "Good knowledge of object-oriented principles, design patterns, data structures",
                 "Leading development of high quality technical solutions, cross-team collaboration, technical interviews, mentorship, code refactoring and review, unit/integration tests. Defining the vision, development strategy and priorities for technologies in projects"
             ]
@@ -38,7 +38,7 @@ export default {
         {
             name: "Programming languages",
             description:
-                "Advanced knowledge of JavaScript, TypeScript, NodeJS, HTML, CSS, SCSS. Basic knowledge of Java SE, PHP"
+                "Advanced knowledge of JavaScript, TypeScript, NodeJS, HTML, CSS, SCSS. Basic knowledge of Java, PHP"
         },
         {
             name: "Frontend",
@@ -54,17 +54,12 @@ export default {
         },
         {
             name: "Testing",
-            description: "Jest, Mocha, Selenium, Cucumber, JSDOM"
+            description: "Jest, Mocha, Selenium, Cucumber"
         },
         {
             name: "Other technologies",
             description: [
-                "Bundlers like Webpack, Rollup and Grunt",
-                "CLI tools like Lerna and NPM",
-                "Log collectors like Kibana, Elastic, Sumologic, Scalyr, NewRelic",
-                "Various CI/CD setups like TeamCity, Jenkins, self-written cloud solutions",
-                "Static linters and platforms like ESList, prettify, SonarQube/Cloud",
-                "Performance analysers like sitespeed.io and Lighthouse"
+                "Webpack, Rollup, Lerna, NPM, Elastic Search & Kibana, Sumologic, Scalyr, NewRelic, TeamCity, Jenkins, ESList, Prettify, SonarQube/Cloud, sitespeed.io, Lighthouse"
             ]
         }
     ],
@@ -120,7 +115,7 @@ export default {
                 "Implemented POC of realtime technical log monitoring system which became a part of team workflow",
                 "Developed a POC service with backend side map rendering"
             ],
-            stack: "React, Redux, Saga, Typescript, Docker, nodejs, scss, jest, AWS, Serverless, aws-cdk, aws-sdk, sitespeed.io, Grafana, Storybook, Express JS, Java, Selenium"
+            stack: "React, Redux, Saga, TypeScript, Docker, NodeJS, Express JS, SCSS, Jest, AWS, Serverless, aws-cdk, aws-sdk, sitespeed.io, Grafana, Storybook, Java, Selenium"
         },
         {
             company: "Albelli (Amsterdam, Netherlands)",
@@ -132,7 +127,7 @@ export default {
                 "Developed different tools for debugging, logging and fixing customer issues",
                 "Set up code quality monitoring system"
             ],
-            stack: "Vanilla js, typescript, scss, nodejs, google-closure-library, mocha, Java, Grunt, Selenium"
+            stack: "JavaScript, TypeScript, SCSS, NodeJS, google-closure-library, Mocha, Java, Grunt, Selenium"
         },
         {
             company: "Insoft Global (Ukraine)",
@@ -144,7 +139,7 @@ export default {
                 "Implemented POC of a hybrid mobile application",
                 "Code review, code refactoring, technical interviews, mentorship"
             ],
-            stack: "Sencha ExtJS, scss, nodejs, Java"
+            stack: "Sencha ExtJS, SCSS, NodeJS, Java"
         },
         {
             company: "Exadel",
@@ -152,7 +147,7 @@ export default {
             dateStart: "July 2012",
             dateEnd: "March 2013",
             description: "Participated in front end development of a Next Wave Logistics (e-commerce project)",
-            stack: "Vanilla js, jquery, css etc."
+            stack: "JavaScript, jQuery, CSS, Backbone JS"
         },
         {
             company: "Simple Solutions",
@@ -163,7 +158,7 @@ export default {
                 "Developed numerous websites using Wordpress and OpenCart. Implemented plugins, widgets and themes for Wordpress.",
                 "Preliminary project analysis. Tasks estimation. User guides writing"
             ],
-            stack: "PHP, MySQL, LAMP, WordPress,  Vanilla js, jquery, css etc."
+            stack: "PHP, MySQL, LAMP, WordPress, JavaScript, jQuery, CSS"
         },
         {
             company: "Simple Solutions",
