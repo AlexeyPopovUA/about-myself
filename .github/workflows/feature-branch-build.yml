@@ -41,9 +41,18 @@ jobs:
       - name: Checks
         run: npm run type-check
 
-      - name: Build
+      - name: Build random branch
+        if: env.SAFE_SOURCE_NAME != 'main'
         run: |
           npm run build-prod
+
+      - name: Build main branch
+        if: env.SAFE_SOURCE_NAME == 'main'
+        run: |
+          npm run build-release
+
+      - name: Pre-render
+        run: |
           npm run pre-render
 
       - name: Configure AWS Credentials
