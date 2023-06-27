@@ -42,12 +42,12 @@ jobs:
         run: npm run type-check
 
       - name: Build random branch
-        if: env.SAFE_SOURCE_NAME != 'main'
+        if: env.SAFE_SOURCE_NAME != env.DEFAULT_BRANCH
         run: |
           npm run build-prod
 
       - name: Build main branch
-        if: env.SAFE_SOURCE_NAME == 'main'
+        if: env.SAFE_SOURCE_NAME == env.DEFAULT_BRANCH
         run: |
           npm run build-release
 
