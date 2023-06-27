@@ -93,7 +93,7 @@ module.exports = env => {
                     : false,
                 PRODUCTION: !!env.release,
                 GOOGLE_ANALYTICS_SCRIPT: !!env.release ?
-                    "<script async src=\"https://www.googletagmanager.com/gtag/js?id=G-2SX0978G4B\"></script>" : "",
+                    "<script async src=\"https://www.googletagmanager.com/gtag/js?id=G-JYECS99R18\"></script>" : "",
                 meta: {
                     charset: {
                         charset: "UTF-8"
