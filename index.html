@@ -7,13 +7,12 @@
     <script type="application/javascript">
         // todo Move to the index.js maybe
         if (<%= htmlWebpackPlugin.options.PRODUCTION %>) {
-            <!-- Google tag (gtag.js) -->
-            <script>
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments)}
-                gtag('js', new Date());
-                gtag('config', 'G-JYECS99R18');
-            </script>
+            //analytics thing :) just for spying, no worries
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-JYECS99R18');
         }
     </script>
 
