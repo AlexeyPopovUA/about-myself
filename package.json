@@ -28,7 +28,7 @@
   },
   "homepage": "https://alexeypopovua.github.io/about-myself",
   "devDependencies": {
-    "@babel/core": "7.22.10",
+    "@babel/core": "7.22.11",
     "@babel/plugin-proposal-class-properties": "7.18.6",
     "@babel/plugin-proposal-export-namespace-from": "7.18.9",
     "@babel/plugin-proposal-nullish-coalescing-operator": "7.18.6",
@@ -38,7 +38,7 @@
     "@babel/plugin-transform-runtime": "7.22.10",
     "@babel/preset-env": "7.22.10",
     "@babel/preset-react": "7.22.5",
-    "@babel/preset-typescript": "7.22.5",
+    "@babel/preset-typescript": "7.22.11",
     "@pmmmwh/react-refresh-webpack-plugin": "0.5.11",
     "@prerenderer/prerenderer": "1.2.3",
     "@prerenderer/renderer-jsdom": "1.1.6",
