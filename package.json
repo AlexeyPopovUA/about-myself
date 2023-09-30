@@ -62,7 +62,7 @@
     "node-sass": "9.0.0",
     "postcss": "8.4.31",
     "postcss-loader": "7.3.3",
-    "postcss-scss": "4.0.8",
+    "postcss-scss": "4.0.9",
     "prettier": "3.0.3",
     "react-refresh": "0.14.0",
     "sass-loader": "13.3.2",
