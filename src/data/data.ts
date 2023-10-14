@@ -10,7 +10,7 @@ export default {
         Blog: { title: "blog.oleksiipopov.com", url: "https://blog.oleksiipopov.com" },
         Portfolio: { title: "blog.oleksiipopov.com/portfolio", url: "https://blog.oleksiipopov.com/portfolio" },
         Email: "opportunities@oleksiipopov.com",
-        Address: "Amsterdam, Netherlands",
+        Address: "Klagenfurt-Villach area, Austria",
         Phone: "+31621548922"
     },
     intro: {
@@ -85,10 +85,20 @@ export default {
     ],
     experience: [
         {
+            company: "Dynatrace (Klagenfurt, Austria)",
+            title: "Senior Software Developer",
+            dateStart: "October 2023",
+            dateEnd: "",
+            description: [
+                "Front End development"
+            ],
+            stack: "React, Typescript, Docker, Kubernetes, NodeJS"
+        },
+        {
             company: "TomTom (Amsterdam, Netherlands)",
             title: "Expert Software Developer",
             dateStart: "March 2021",
-            dateEnd: "",
+            dateEnd: "September 2023",
             description: [
                 "Designed and developed the core part of a new route planning single page application - https://plan.tomtom.com (public beta). It is a React PWA with pre-rendering, lazy loading, localization, hot module reloading etc",
                 "Started development of the new web SDK for TomTom public services and it's distribution infrastructure. ",
