@@ -41,7 +41,7 @@
     "@babel/preset-typescript": "7.23.3",
     "@pmmmwh/react-refresh-webpack-plugin": "0.5.11",
     "@prerenderer/prerenderer": "1.2.4",
-    "@prerenderer/renderer-jsdom": "1.1.7",
+    "@prerenderer/renderer-jsdom": "1.1.8",
     "@svgr/webpack": "8.1.0",
     "@types/react": "18.2.47",
     "@types/react-dom": "18.2.18",
