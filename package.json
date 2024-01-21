@@ -67,7 +67,7 @@
     "react-refresh": "0.14.0",
     "sass-loader": "14.0.0",
     "sitemap-webpack-plugin": "1.1.1",
-    "source-map-loader": "4.0.2",
+    "source-map-loader": "5.0.0",
     "style-loader": "3.3.4",
     "ts-node": "10.9.2",
     "typescript": "5.3.3",
