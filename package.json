@@ -60,7 +60,7 @@
     "jsdom": "24.0.0",
     "mini-css-extract-plugin": "2.8.0",
     "node-sass": "9.0.0",
-    "postcss": "8.4.33",
+    "postcss": "8.4.35",
     "postcss-loader": "8.1.0",
     "postcss-scss": "4.0.9",
     "prettier": "3.2.5",
